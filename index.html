@@ -100,7 +100,27 @@
                                 <p class="text-gray-600 text-sm">Northern European Renaissance art</p>
                             </div>
                         </div>
-                        <!-- More cards follow same pattern -->
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="pre-modern" data-md-file="md_docs3/Baroque.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Baroque</h4>
+                                <p class="text-gray-600 text-sm">Dramatic, ornate 17th century art</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="pre-modern" data-md-file="md_docs3/Rococo.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Rococo</h4>
+                                <p class="text-gray-600 text-sm">Ornamental late Baroque style</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="pre-modern" data-md-file="md_docs3/Neoclassicism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Neoclassicism</h4>
+                                <p class="text-gray-600 text-sm">Revival of classical antiquity</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -141,7 +161,41 @@
                                 <p class="text-gray-600 text-sm">Bold, vibrant colors and forms</p>
                             </div>
                         </div>
-                        <!-- More cards follow same pattern -->
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="modern" data-md-file="md_docs3/Cubism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Cubism</h4>
+                                <p class="text-gray-600 text-sm">Geometric fragmentation of forms</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="modern" data-md-file="md_docs3/Futurism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Futurism</h4>
+                                <p class="text-gray-600 text-sm">Celebrating technology and modernity</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="modern" data-md-file="md_docs3/Dada.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Dada</h4>
+                                <p class="text-gray-600 text-sm">Anti-art anarchic movement</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="modern" data-md-file="md_docs3/Surrealism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Surrealism</h4>
+                                <p class="text-gray-600 text-sm">Unconscious mind and dream imagery</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="modern" data-md-file="md_docs3/Abstract_Expressionism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Abstract Expressionism</h4>
+                                <p class="text-gray-600 text-sm">Post-WWII American abstract art</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -182,7 +236,27 @@
                                 <p class="text-gray-600 text-sm">Italian postmodern painting movement</p>
                             </div>
                         </div>
-                        <!-- More cards follow same pattern -->
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="post-modern" data-md-file="md_docs3/Young_British_Artists.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Young British Artists</h4>
+                                <p class="text-gray-600 text-sm">1990s provocative British art</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="post-modern" data-md-file="md_docs3/Neo_Expressionism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Neo-Expressionism</h4>
+                                <p class="text-gray-600 text-sm">1980s return to figurative painting</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="post-modern" data-md-file="md_docs3/Relational_Aesthetics.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Relational Aesthetics</h4>
+                                <p class="text-gray-600 text-sm">Art based on human interactions</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -296,11 +370,8 @@
                 errorMessage.classList.add('hidden');
                 movementTitle.textContent = title;
 
-                // Correct GitHub raw URL path structure
-                const githubUsername = 'your-github-username'; // Replace with your actual GitHub username
-                const repoName = 'your-repo-name'; // Replace with your actual repo name
-                const branchName = 'main'; // Or your branch name
-                const rawFileUrl = `https://raw.githubusercontent.com/${githubUsername}/${repoName}/${branchName}/${mdFile}`;
+                // GitHub raw URL for public repo access
+                const rawFileUrl = `https://raw.githubusercontent.com/username/art-mindmap/main/${mdFile}`;
 
                 fetchMarkdownFile(rawFileUrl)
                     .then(markdownText => {
@@ -322,23 +393,27 @@
                 markdownContent.classList.add('hidden');
             }
 
-            // Improved fetch function with error handling
+            // Enhanced fetch function with GitHub rate limit handling
             function fetchMarkdownFile(url) {
                 return new Promise((resolve, reject) => {
                     fetch(url)
                         .then(response => {
+                            if (response.status === 403) {
+                                throw new Error('GitHub API rate limit exceeded. Please wait and try again later.');
+                            }
                             if (!response.ok) {
                                 throw new Error(`HTTP error! Status: ${response.status}`);
                             }
                             return response.text();
                         })
                         .then(text => {
-                            if (text.includes('404: Not Found')) {
-                                throw new Error('File not found on GitHub');
+                            if (text.includes('404: Not Found') || text.includes('404 Not Found')) {
+                                throw new Error('Art movement file not found in repository');
                             }
                             resolve(text);
                         })
                         .catch(error => {
+                            console.error('Fetch error:', error);
                             reject(error);
                         });
                 });
