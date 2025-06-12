@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Movements Mind Map</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .markdown-content h1:hover, .markdown-content h2:hover, .markdown-content h3:hover {
+            color: #4f46e5;
+        }
+        .content-hidden {
+            display: none;
+        }
+        .toggle-icon {
+            transition: transform 0.2s;
+            margin-right: 0.5rem;
+        }
+        .toggle-icon.rotated {
+            transform: rotate(180deg);
+        }
+        .category-title {
+            background-color: #eef2ff;
+        }
+        #loading-spinner {
+            display: none;
+        }
+        .art-movement-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-indigo-700 text-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <h1 class="text-3xl md:text-4xl font-bold">Art Movements Mind Map</h1>
+            <p class="mt-2 text-indigo-100">Explore art history through interactive mind maps</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Home View - Art Movement Categories -->
+        <div id="home-view">
+            <div class="mb-12">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800">Browse Art Movements by Period</h2>
+                
+                <!-- Search Bar -->
+                <div class="mb-8 relative">
+                    <input type="text" id="search-input" placeholder="Search art movements..." 
+                           class="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    <i class="fas fa-search absolute right-4 top-4 text-gray-400"></i>
+                </div>
+                
+                <!-- Pre Modern Section -->
+                <div class="mb-8 rounded-lg overflow-hidden shadow">
+                    <div class="category-title p-4 bg-indigo-100 border-b border-indigo-200">
+                        <h3 class="text-xl font-semibold text-indigo-800 flex items-center">
+                            <i class="fas fa-landmark mr-2"></i>
+                            Pre-Modern Art
+                        </h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 bg-white">
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/Early_Northern_Renaissance.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Early Northern Renaissance</h4>
+                                <p class="text-gray-600 text-sm">14th-15th century Northern European art</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/Early_Renaissance.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Early Renaissance</h4>
+                                <p class="text-gray-600 text-sm">14th-15th century Italian art revival</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/Mid_Renaissance.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-899 mb-1">Mid Renaissance</h4>
+                                <p class="text-gray-600 text-sm">High point of Renaissance art</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/Mid_Northern_Renaissance.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Mid Northern Renaissance</h4>
+                                <p class="text-gray-600 text-sm">Northern European Renaissance development</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/High_Northern_Renaissance.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">High Northern Renaissance</h4>
+                                <p class="text-gray-600 text-sm">Peak of Northern Renaissance art</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/High_Renaissance.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">High Renaissance</h4>
+                                <p class="text-gray-600 text-sm">Masterpieces of da Vinci, Michelangelo</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/Mannerism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Mannerism</h4>
+                                <p class="text-gray-600 text-sm">Stylized late Renaissance art</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/Baroque_Golden_Age_Dutch.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Baroque Golden Age Dutch</h4>
+                                <p class="text-gray-600 text-sm">17th century Dutch masterpieces</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/Rococo_period.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Rococo Period</h4>
+                                <p class="text-gray-600 text-sm">Ornate late Baroque style</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/Neo_Classical.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Neo Classical</h4>
+                                <p class="text-gray-600 text-sm">Revival of classical antiquity</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/Pre-Raphaelites.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Pre-Raphaelites</h4>
+                                <p class="text-gray-600 text-sm">19th century British art movement</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/Romantic.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Romanticism</h4>
+                                <p class="text-gray-600 text-sm">Emotion and individualism in art</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/Realism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Realism</h4>
+                                <p class="text-gray-600 text-sm">Depiction of everyday subjects</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/Gothic_and_symbolist.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Gothic and Symbolist</h4>
+                                <p class="text-gray-600 text-sm">Mystical and medieval influences</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="pre-modern" data-md-file="md_docs3/Barbizon_School.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Barbizon School</h4>
+                                <p class="text-gray-600 text-sm">French landscape painting movement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modern Section -->
+                <div class="mb-8 rounded-lg overflow-hidden shadow">
+                    <div class="category-title p-4 bg-indigo-100 border-b border-indigo-200">
+                        <h3 class="text-xl font-semibold text-indigo-800 flex items-center">
+                            <i class="fas fa-palette mr-2"></i>
+                            Modern Art
+                        </h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 bg-white">
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Impressionism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Impressionism</h4>
+                                <p class="text-gray-600 text-sm">Capturing light and momentary effects</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Post_Impressionism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Post Impressionism</h4>
+                                <p class="text-gray-600 text-sm">Extensions beyond Impressionism</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Pointilism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Pointilism</h4>
+                                <p class="text-gray-600 text-sm">Painting with small distinct dots</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Fauvism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Fauvism</h4>
+                                <p class="text-gray-600 text-sm">Bold, vivid colors in painting</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Analytic_Cubism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Analytic Cubism</h4>
+                                <p class="text-gray-600 text-sm">Deconstructing objects into fragments</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Futurism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Futurism</h4>
+                                <p class="text-gray-600 text-sm">Celebrating modernity and technology</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Expressionism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Expressionism</h4>
+                                <p class="text-gray-600 text-sm">Distorted reality for emotional effect</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/DaDa.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">DaDa</h4>
+                                <p class="text-gray-600 text-sm">Anti-art avant-garde movement</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/De_Stijl.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">De Stijl</h4>
+                                <p class="text-gray-600 text-sm">Dutch neoplasticism movement</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Synthetic_Cubism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Synthetic Cubism</h4>
+                                <p class="text-gray-600 text-sm">Collage elements in cubist work</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Suprematism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Suprematism</h4>
+                                <p class="text-gray-600 text-sm">Geometric abstraction in Russia</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Constructivism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Constructivism</h4>
+                                <p class="text-gray-600 text-sm">Russian industrial materials in art</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/New_objectivity.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">New Objectivity</h4>
+                                <p class="text-gray-600 text-sm">German post-expressionist realism</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Surrealism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Surrealism</h4>
+                                <p class="text-gray-600 text-sm">Unconscious mind in artistic practice</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/School_of_Paris.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">School of Paris</h4>
+                                <p class="text-gray-600 text-sm">International modern artists in Paris</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Not_aligned_artists.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Not Aligned Artists</h4>
+                                <p class="text-gray-600 text-sm">Modern artists without movement affiliation</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Post_War_Paris.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Post War Paris</h4>
+                                <p class="text-gray-600 text-sm">Artistic developments after WWII</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Abstract_Expressionism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Abstract Expressionism</h4>
+                                <p class="text-gray-600 text-sm">Post-war American avant-garde art</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Neo_DaDa.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Neo DaDa</h4>
+                                <p class="text-gray-600 text-sm">Revival of Dada principles</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Late_Modernism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Late Modernism</h4>
+                                <p class="text-gray-600 text-sm">Final phase of modernist art</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Minimalism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Minimalism</h4>
+                                <p class="text-gray-600 text-sm">Extreme simplicity in form</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Pop_Art.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Pop Art</h4>
+                                <p class="text-gray-600 text-sm">Celebration of consumer culture</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Op_Art.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Op Art</h4>
+                                <p class="text-gray-600 text-sm">Optical illusions in art</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Arte_Povera.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Arte Povera</h4>
+                                <p class="text-gray-600 text-sm">Italian 'poor art' movement</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Land_Art.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Land Art</h4>
+                                <p class="text-gray-600 text-sm">Art made from natural landscapes</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Performance_Art.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Performance Art</h4>
+                                <p class="text-gray-600 text-sm">Live artistic performances</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="modern" data-md-file="md_docs3/Conceptual_Art.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Conceptual Art</h4>
+                                <p class="text-gray-600 text-sm">Ideas over aesthetic appearance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Post Modern Section -->
+                <div class="rounded-lg overflow-hidden shadow">
+                    <div class="category-title p-4 bg-indigo-100 border-b border-indigo-200">
+                        <h3 class="text-xl font-semibold text-indigo-800 flex items-center">
+                            <i class="fas fa-globe mr-2"></i>
+                            Postmodern Art
+                        </h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 bg-white">
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="post-modern" data-md-file="md_docs3/BANK.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">BANK</h4>
+                                <p class="text-gray-600 text-sm">British postmodern art collective</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="post-modern" data-md-file="md_docs3/Feminist_Art.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Feminist Art</h4>
+                                <p class="text-gray-600 text-sm">Gender and equality in art</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="post-modern" data-md-file="md_docs3/Post_Modernism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Post Modernism</h4>
+                                <p class="text-gray-600 text-sm">Rejection of modernist principles</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="post-modern" data-md-file="md_docs3/Transavantgardia.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Transavantgardia</h4>
+                                <p class="text-gray-600 text-sm">Italian postmodern painting movement</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="post-modern" data-md-file="md_docs3/Wilde_Bilder.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Wilde Bilder</h4>
+                                <p class="text-gray-600 text-sm">German wild painting movement</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="post-modern" data-md-file="md_docs3/New_Expressionism_and_New_Image_painting.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">New Expressionism</h4>
+                                <p class="text-gray-600 text-sm">Revival of expressive painting</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="post-modern" data-md-file="md_docs3/Neo_Geo.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Neo Geo</h4>
+                                <p class="text-gray-600 text-sm">Neo-geometric conceptual art</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all" 
+                             data-category="post-modern" data-md-file="md_docs3/YBA.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">YBA</h4>
+                                <p class="text-gray-600 text-sm">Young British Artists movement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detail View - Markdown Content -->
+        <div id="detail-view" class="hidden">
+            <div class="flex items-center mb-6">
+                <button id="back-button" class="flex items-center text-indigo-600 hover:text-indigo-800 mr-4">
+                    <i class="fas fa-arrow-left mr-2"></i> Back
+                </button>
+                <h2 id="movement-title" class="text-2xl font-bold text-gray-800"></h2>
+            </div>
+            
+            <div id="loading-spinner" class="flex justify-center my-12">
+                <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
+            </div>
+            
+            <div id="markdown-content" class="markdown-content bg-white p-6 rounded-lg shadow"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-semibold">Art Movements Mind Map</h3>
+                    <p class="text-gray-400 mt-1">Exploring the evolution of visual art</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400 text-sm">
+                <p>© 2023 Art Movements Explorer. All art movement information is for educational purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM elements
+            const homeView = document.getElementById('home-view');
+            const detailView = document.getElementById('detail-view');
+            const backButton = document.getElementById('back-button');
+            const movementTitle = document.getElementById('movement-title');
+            const markdownContent = document.getElementById('markdown-content');
+            const loadingSpinner = document.getElementById('loading-spinner');
+            const searchInput = document.getElementById('search-input');
+            
+            
+            // Event listeners for art movement cards
+            const artMovementCards = document.querySelectorAll('.art-movement-card');
+            artMovementCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const mdFile = this.getAttribute('data-md-file');
+                    const title = this.querySelector('h4').textContent;
+                    loadMarkdownContent(mdFile, title);
+                });
+            });
+            
+            // Back button functionality
+            backButton.addEventListener('click', function() {
+                homeView.classList.remove('hidden');
+                detailView.classList.add('hidden');
+            });
+            
+            // Search functionality
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const cards = document.querySelectorAll('.art-movement-card');
+                
+                cards.forEach(card => {
+                    const title = card.querySelector('h4').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+            
+            // Function to load and display markdown content
+            function loadMarkdownContent(mdFile, title) {
+                homeView.classList.add('hidden');
+                detailView.classList.remove('hidden');
+                loadingSpinner.style.display = 'flex';
+                markdownContent.innerHTML = '';
+                movementTitle.textContent = title;
+                
+                fetchMarkdownFile(mdFile)
+                    .then(markdownText => {
+                        renderMarkdown(markdownText);
+                        loadingSpinner.style.display = 'none';
+                    })
+                    .catch(error => {
+                        renderMarkdown('# Error Loading Content\n\nCould not load the requested art movement information.');
+                        loadingSpinner.style.display = 'none';
+                        console.error('Error:', error);
+                    });
+            }
+            
+            // Function to render markdown as HTML
+            function renderMarkdown(markdownText) {
+                // Basic markdown to HTML conversion (simplified)
+                let html = markdownText
+                    // Headers
+                    .replace(/^# (.*$)/gm, '<h1 class="text-2xl font-bold my-4" data-level="1"><span class="toggle-icon">▼</span> $1</h1>')
+                    .replace(/^## (.*$)/gm, '<h2 class="text-xl font-semibold my-3 ml-4 content-hidden" data-level="2"><span class="toggle-icon">▼</span> $1</h2>')
+                    .replace(/^### (.*$)/gm, '<h3 class="text-lg font-medium my-2 ml-8 content-hidden" data-level="3"><span class="toggle-icon">▼</span> $1</h3>')
+                    // Lists
+                    .replace(/^- (.*$)/gm, '<li class="ml-12 my-1 content-hidden">$1</li>');
+                
+                // Wrap lists in ul tags (simplified - real implementation would need to be more sophisticated)
+                html = html.replace(/(<li.*<\/li>)/g, '<ul class="list-disc">$1</ul>');
+                
+                markdownContent.innerHTML = html;
+                
+                // Add event listeners to headers for toggle functionality
+                const headers = markdownContent.querySelectorAll('h1, h2, h3');
+                headers.forEach(header => {
+                    header.addEventListener('click', function() {
+                        const level = parseInt(this.getAttribute('data-level'));
+                        const icon = this.querySelector('.toggle-icon');
+                        
+                        // Toggle icon rotation
+                        icon.classList.toggle('rotated');
+                        
+                        // Toggle visibility of next elements until next header of same or higher level
+                        let next = this.nextElementSibling;
+                        while (next) {
+                            if (next.tagName && next.tagName.match(/^H[1-6]$/)) {
+                                const nextLevel = parseInt(next.getAttribute('data-level'));
+                                if (nextLevel <= level) break;
+                            }
+                            
+                            next.classList.toggle('content-hidden');
+                            
+                            // If this is being closed, also close any child headers
+                            if (icon.classList.contains('rotated') && next.tagName && next.tagName.match(/^H[1-6]$/)) {
+                                const nextLevel = parseInt(next.getAttribute('data-level'));
+                                if (nextLevel > level) {
+                                    const childIcon = next.querySelector('.toggle-icon');
+                                    if (childIcon && childIcon.classList.contains('rotated')) {
+                                        next.click(); // Simulate click to close children
+                                    }
+                                }
+                            }
+                            
+                            next = next.nextElementSibling;
+                        }
+                    });
+                });
+                
+                // Initially click all h1s to expand them
+                const h1s = markdownContent.querySelectorAll('h1');
+                h1s.forEach(h1 => {
+                    if (!h1.querySelector('.toggle-icon').classList.contains('rotated')) {
+                        h1.click();
+                    }
+                });
+            }
+            
+            function fetchMarkdownFile(filename) {
+                return fetch(`md_docs3/${filename}`)
+                    .then(response => {
+                        if (!response.ok) throw new Error('File not found');
+                        return response.text();
+                    })
+                    .catch(error => {
+                        console.error('Error loading markdown file:', error);
+                        return '# Error Loading Content\n\nCould not load the requested art movement information.';
+                    });
+            }
+        });
+    </script>
+</body>
+</html>
