@@ -1,631 +1,3 @@
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Art movement data structure
-    const movementData = {
-        'pre-modern': [
-            { 
-                name: 'Early Northern Renaissance', 
-                description: '14th-15th century Northern European art',
-                mdFile: 'md_docs3/Early_Northern_Renaissance.md'
-            },
-            { 
-                name: 'High Renaissance', 
-                description: 'Late 15th-early 16th century classical art',
-                mdFile: 'md_docs3/High_Renaissance.md'
-            },
-            { 
-                name: 'Baroque', 
-                description: 'Dramatic, emotional 17th century art',
-                mdFile: 'md_docs3/Baroque.md'
-            }
-            // Add more pre-modern movements here following the same pattern
-        ],
-        'modern': [
-            { 
-                name: 'Impressionism', 
-                description: 'Capturing light and momentary effects',
-                mdFile: 'md_docs3/Impressionism.md'
-            }
-            // Add more modern movements here following the same pattern
-        ],
-        'post-modern': [
-            { 
-                name: 'Pop Art', 
-                description: 'Incorporating elements of popular culture',
-                mdFile: 'md_docs3/Pop_Art.md'
-            }
-            // Add more post-modern movements here following the same pattern
-        ]
-    };
-
-    // DOM elements
-    const homeView = document.getElementById('home-view');
-    const detailView = document.getElementById('detail-view');
-    const backButton = document.getElementById('back-button');
-    const movementTitle = document.getElementById('movement-title');
-    const markdownContent = document.getElementById('markdown-content');
-    const loadingSpinner = document.getElementById('loading-spinner');
-    const searchInput = document.getElementById('search-input');
-    const errorMessage = document.getElementById('error-message');
-    const errorTitle = document.getElementById('error-title');
-    const errorText = document.getElementById('error-text');
-    const gridContainers = document.querySelectorAll('.grid-container');
-
-    // Initialize the app
-    function initApp() {
-        renderMovementCards();
-        setupEventListeners();
-    }
-
-    // Render movement cards based on categories
-    function renderMovementCards() {
-        movementData['pre-modern'].forEach(movement => {
-            gridContainers[0].appendChild(createMovementCard(movement, 'pre-modern'));
-        });
-
-        movementData['modern'].forEach(movement => {
-            gridContainers[1].appendChild(createMovementCard(movement, 'modern'));
-        });
-
-        movementData['post-modern'].forEach(movement => {
-            gridContainers[2].appendChild(createMovementCard(movement, 'post-modern'));
-        });
-    }
-
-    // Create a movement card element
-    function createMovementCard(movement, category) {
-        const card = document.createElement('div');
-        card.className = 'art-movement-card';
-        card.dataset.category = category;
-        card.dataset.mdFile = movement.mdFile;
-        
-        const cardContent = document.createElement('div');
-        cardContent.className = 'card-content';
-        cardContent.innerHTML = `
-            <h4>${movement.name}</h4>
-            <p>${movement.description}</p>
-        `;
-        
-        card.appendChild(cardContent);
-        return card;
-    }
-
-    // Set up event listeners
-    function setupEventListeners() {
-        // Movement card clicks
-        document.querySelectorAll('.art-movement-card').forEach(card => {
-            card.addEventListener('click', function() {
-                const mdFile = this.dataset.mdFile;
-                const title = this.querySelector('h4').textContent;
-                loadMarkdownContent(mdFile, title);
-            });
-        });
-
-        // Back button
-        backButton.addEventListener('click', function() {
-            homeView.classList.remove('hidden');
-            detailView.classList.add('hidden');
-            errorMessage.classList.add('hidden');
-        });
-
-        // Search functionality
-        searchInput.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            const cards = document.querySelectorAll('.art-movement-card');
-
-            cards.forEach(card => {
-                const title = card.querySelector('h4').textContent.toLowerCase();
-                const description = card.querySelector('p').textContent.toLowerCase();
-
-                if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    }
-
-    // Load and display markdown content
-    function loadMarkdownContent(mdFile, title) {
-        homeView.classList.add('hidden');
-        detailView.classList.remove('hidden');
-        loadingSpinner.style.display = 'flex';
-        markdownContent.innerHTML = '';
-        errorMessage.classList.add('hidden');
-        movementTitle.textContent = title;
-
-        // Fetch markdown file
-        fetch(mdFile)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`File not found: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(markdownText => {
-                renderMarkdown(markdownText);
-                loadingSpinner.style.display = 'none';
-            })
-            .catch(error => {
-                console.error('Error loading markdown:', error);
-                showError('Content Not Available', `Could not load the requested art movement information. Error: ${error.message}`);
-                loadingSpinner.style.display = 'none';
-            });
-    }
-
-    // Show error message
-    function showError(title, message) {
-        errorTitle.textContent = title;
-        errorText.textContent = message;
-        errorMessage.classList.remove('hidden');
-        markdownContent.classList.add('hidden');
-    }
-
-    // Render markdown as HTML with collapsible sections
-    function renderMarkdown(markdownText) {
-        // Convert markdown to HTML
-        let html = markdownText
-            // Headers with toggle icons
-            .replace(/^# (.*$)/gm, '<h1 class="collapsible" data-level="1"><span class="toggle-icon">▼</span> $1</h1>')
-            .replace(/^## (.*$)/gm, '<h2 class="collapsible" data-level="2"><span class="toggle-icon">▼</span> $1</h2>')
-            .replace(/^### (.*$)/gm, '<h3 class="collapsible" data-level="3"><span class="toggle-icon">▼</span> $1</h3>')
-            // Paragraphs
-            .replace(/^(?!<|#|<\/|-\s|\d+\.)(.*$)/gm, '<p>$1</p>')
-            // Lists
-            .replace(/^- (.*$)/gm, '<li>$1</li>')
-            // Bold
-            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-            // Italic
-            .replace(/\*(.*?)\*/g, '<em>$1</em>')
-            // Links
-            .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>')
-            // Images
-            .replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" class="markdown-image">');
-
-        // Wrap lists in ul tags
-        html = html.replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>');
-
-        markdownContent.innerHTML = html;
-        markdownContent.classList.remove('hidden');
-
-        // Initialize collapsible sections
-        initCollapsibleSections();
-    }
-
-    // Initialize collapsible sections
-    function initCollapsibleSections() {
-        const headers = markdownContent.querySelectorAll('.collapsible');
-        
-        headers.forEach(header => {
-            // Initially hide content under headers except h1
-            if (!header.classList.contains('expanded')) {
-                const level = parseInt(header.dataset.level);
-                if (level > 1) {
-                    header.classList.add('collapsed');
-                }
-                
-                hideContent(header);
-            }
-
-            // Add click handlers
-            header.addEventListener('click', function() {
-                const icon = this.querySelector('.toggle-icon');
-                icon.classList.toggle('rotated');
-                this.classList.toggle('collapsed');
-                
-                // Toggle content visibility
-                toggleContent(this);
-            });
-        });
-    }
-
-    // Hide content under a header
-    function hideContent(header) {
-        const level = parseInt(header.dataset.level);
-        let next = header.nextElementSibling;
-        
-        while (next) {
-            if (next.classList && next.classList.contains('collapsible')) {
-                const nextLevel = parseInt(next.dataset.level);
-                if (nextLevel <= level) break;
-            }
-            
-            next.style.display = 'none';
-            next = next.nextElementSibling;
-        }
-    }
-
-    // Toggle content under a header
-    function toggleContent(header) {
-        const level = parseInt(header.dataset.level);
-        let next = header.nextElementSibling;
-        
-        while (next) {
-            if (next.classList && next.classList.contains('collapsible')) {
-                const nextLevel = parseInt(next.dataset.level);
-                if (nextLevel <= level) break;
-            }
-            
-            if (header.classList.contains('collapsed')) {
-                next.style.display = 'none';
-            } else {
-                next.style.display = '';
-            }
-            
-            next = next.nextElementSibling;
-        }
-    }
-
-    // Start the app
-    initApp();
-});
-
-
-/* Base Styles */
-:root {
-    --primary: #4f46e5;
-    --primary-light: #eef2ff;
-    --text: #1f2937;
-    --text-light: #6b7280;
-    --error: #dc2626;
-    --error-light: #fef2f2;
-}
-
-body {
-    font-family: system-ui, -apple-system, sans-serif;
-    background-color: #f9fafb;
-    color: var(--text);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-/* Header Styles */
-.header {
-    background-color: var(--primary);
-    color: white;
-    padding: 1.5rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.header h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-.header p {
-    margin: 0.5rem 0 0 0;
-    opacity: 0.9;
-    font-size: 1rem;
-}
-
-/* Category Styles */
-.category-section {
-    margin-bottom: 2rem;
-    background: white;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.category-title {
-    background-color: var(--primary-light);
-    padding: 1rem;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.category-title h3 {
-    margin: 0;
-    font-size: 1.25rem;
-    color: var(--primary);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-/* Grid Layout */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-}
-
-/* Art Movement Card Styles */
-.art-movement-card {
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.5rem;
-    padding: 1.25rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.art-movement-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-.art-movement-card h4 {
-    margin: 0 0 0.25rem 0;
-    font-size: 1.125rem;
-    font-weight: 500;
-}
-
-.art-movement-card p {
-    margin: 0;
-    font-size: 0.875rem;
-    color: var(--text-light);
-}
-
-/* Search Styles */
-.search-container {
-    position: relative;
-    margin-bottom: 1.5rem;
-}
-
-.search-container input {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-}
-
-.search-icon {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #9ca3af;
-}
-
-/* Detail View Styles */
-.detail-view {
-    display: none;
-}
-
-.detail-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.back-button {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: none;
-    border: none;
-    color: var(--primary);
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 0.5rem 0;
-}
-
-.back-button:hover {
-    color: #4338ca;
-}
-
-#movement-title {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-/* Markdown Content Styles */
-.markdown-content {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.markdown-content h1,
-.markdown-content h2,
-.markdown-content h3 {
-    cursor: pointer;
-    position: relative;
-    padding-left: 1.5rem;
-    transition: color 0.2s;
-}
-
-.markdown-content h1:hover,
-.markdown-content h2:hover,
-.markdown-content h3:hover {
-    color: var(--primary);
-}
-
-.markdown-content h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 1.5rem 0 1rem 0;
-}
-
-.markdown-content h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 1.25rem 0 0.75rem 0;
-}
-
-.markdown-content h3 {
-    font-size: 1.125rem;
-    font-weight: 500;
-    margin: 1rem 0 0.5rem 0;
-}
-
-.markdown-content p {
-    margin: 0.5rem 0;
-    color: var(--text);
-    line-height: 1.6;
-}
-
-.markdown-content ul {
-    padding-left: 1.5rem;
-    margin: 0.5rem 0;
-    list-style-type: disc;
-}
-
-.markdown-content li {
-    margin-bottom: 0.25rem;
-}
-
-.markdown-content a {
-    color: var(--primary);
-    text-decoration: underline;
-}
-
-.markdown-content a:hover {
-    color: #4338ca;
-}
-
-/* Toggle Elements */
-.toggle-icon {
-    position: absolute;
-    left: 0;
-    transition: transform 0.2s;
-    margin-right: 0.5rem;
-}
-
-.rotated {
-    transform: rotate(90deg);
-}
-
-.content-hidden {
-    display: none;
-}
-
-/* Loading Spinner */
-.loading-spinner {
-    display: none;
-    justify-content: center;
-    margin: 3rem 0;
-}
-
-.spinner {
-    width: 3rem;
-    height: 3rem;
-    border: 3px solid #e5e7eb;
-    border-top-color: var(--primary);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Error Message */
-.error-message {
-    background-color: var(--error-light);
-    border-left: 4px solid var(--error);
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 0.25rem;
-}
-
-.error-content {
-    display: flex;
-    gap: 0.75rem;
-}
-
-.error-icon {
-    color: var(--error);
-    margin-top: 0.25rem;
-}
-
-.error-text h3 {
-    margin: 0 0 0.25rem 0;
-    font-size: 1rem;
-    color: var(--error);
-}
-
-.error-text p {
-    margin: 0;
-    font-size: 0.875rem;
-    color: var(--error);
-}
-
-/* Footer Styles */
-.footer {
-    background-color: #1f2937;
-    color: white;
-    padding: 2rem 0;
-    margin-top: 4rem;
-}
-
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer-left h3 {
-    font-size: 1.25rem;
-    margin: 0 0 0.5rem 0;
-}
-
-.footer-left p {
-    margin: 0;
-    color: #9ca3af;
-    font-size: 0.875rem;
-}
-
-.footer-right {
-    display: flex;
-    gap: 1rem;
-}
-
-.github-link {
-    color: #9ca3af;
-    font-size: 1.5rem;
-    transition: color 0.2s;
-}
-
-.github-link:hover {
-    color: white;
-}
-
-.footer-copyright {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #374151;
-    font-size: 0.875rem;
-    color: #9ca3af;
-}
-
-/* Utility Classes */
-.hidden {
-    display: none;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header h1 {
-        font-size: 1.5rem;
-    }
-    
-    .category-title h3 {
-        font-size: 1.125rem;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -687,7 +59,7 @@ body {
                 <!-- Search Bar -->
                 <div class="mb-8 relative">
                     <input type="text" id="search-input" placeholder="Search art movements..."
-                           class="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                            class="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
                     <i class="fas fa-search absolute right-4 top-4 text-gray-400"></i>
                 </div>
 
@@ -701,26 +73,34 @@ body {
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 bg-white">
                         <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
-                              data-category="pre-modern" data-movement="early-northern-renaissance">
+                              data-category="pre-modern" data-md-file="md_docs3/Early_Northern_Renaissance.md">
                             <div class="p-5">
                                 <h4 class="text-lg font-medium text-gray-900 mb-1">Early Northern Renaissance</h4>
                                 <p class="text-gray-600 text-sm">14th-15th century Northern European art</p>
                             </div>
                         </div>
                         <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
-                              data-category="pre-modern" data-movement="high-renaissance">
+                              data-category="pre-modern" data-md-file="md_docs3/Early_Renaissance.md">
                             <div class="p-5">
-                                <h4 class="text-lg font-medium text-gray-900 mb-1">High Renaissance</h4>
-                                <p class="text-gray-600 text-sm">Late 15th-early 16th century classical art</p>
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Early Renaissance</h4>
+                                <p class="text-gray-600 text-sm">15th century Italian art</p>
                             </div>
                         </div>
                         <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
-                              data-category="pre-modern" data-movement="baroque">
+                              data-category="pre-modern" data-md-file="md_docs3/Mid_Renaissance.md">
                             <div class="p-5">
-                                <h4 class="text-lg font-medium text-gray-900 mb-1">Baroque</h4>
-                                <p class="text-gray-600 text-sm">Dramatic, emotional 17th century art</p>
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Mid Renaissance</h4>
+                                <p class="text-gray-600 text-sm">High point of Renaissance art</p>
                             </div>
                         </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="pre-modern" data-md-file="md_docs3/Mid_Northern_Renaissance.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Mid Northern Renaissance</h4>
+                                <p class="text-gray-600 text-sm">Northern European Renaissance art</p>
+                            </div>
+                        </div>
+                        <!-- More cards follow same pattern -->
                     </div>
                 </div>
 
@@ -734,26 +114,34 @@ body {
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 bg-white">
                         <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
-                              data-category="modern" data-movement="impressionism">
+                              data-category="modern" data-md-file="md_docs3/Impressionism.md">
                             <div class="p-5">
                                 <h4 class="text-lg font-medium text-gray-900 mb-1">Impressionism</h4>
                                 <p class="text-gray-600 text-sm">Capturing light and momentary effects</p>
                             </div>
                         </div>
                         <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
-                              data-category="modern" data-movement="expressionism">
+                              data-category="modern" data-md-file="md_docs3/Post_Impressionism.md">
                             <div class="p-5">
-                                <h4 class="text-lg font-medium text-gray-900 mb-1">Expressionism</h4>
-                                <p class="text-gray-600 text-sm">Emotional experience over reality</p>
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Post Impressionism</h4>
+                                <p class="text-gray-600 text-sm">Extended Impressionism's use of color</p>
                             </div>
                         </div>
                         <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
-                              data-category="modern" data-movement="cubism">
+                              data-category="modern" data-md-file="md_docs3/Pointilism.md">
                             <div class="p-5">
-                                <h4 class="text-lg font-medium text-gray-900 mb-1">Cubism</h4>
-                                <p class="text-gray-600 text-sm">Geometric fragmentation of objects</p>
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Pointilism</h4>
+                                <p class="text-gray-600 text-sm">Using small dots to form images</p>
                             </div>
                         </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="modern" data-md-file="md_docs3/Fauvism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Fauvism</h4>
+                                <p class="text-gray-600 text-sm">Bold, vibrant colors and forms</p>
+                            </div>
+                        </div>
+                        <!-- More cards follow same pattern -->
                     </div>
                 </div>
 
@@ -767,26 +155,34 @@ body {
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 bg-white">
                         <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
-                              data-category="post-modern" data-movement="pop-art">
-                            <div class="p-5">
-                                <h4 class="text-lg font-medium text-gray-900 mb-1">Pop Art</h4>
-                                <p class="text-gray-600 text-sm">Incorporating elements of popular culture</p>
-                            </div>
-                        </div>
-                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
-                              data-category="post-modern" data-movement="conceptual-art">
-                            <div class="p-5">
-                                <h4 class="text-lg font-medium text-gray-900 mb-1">Conceptual Art</h4>
-                                <p class="text-gray-600 text-sm">Idea over visual components</p>
-                            </div>
-                        </div>
-                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
-                              data-category="post-modern" data-movement="feminist-art">
+                              data-category="post-modern" data-md-file="md_docs3/Feminist_Art.md">
                             <div class="p-5">
                                 <h4 class="text-lg font-medium text-gray-900 mb-1">Feminist Art</h4>
                                 <p class="text-gray-600 text-sm">Gender and equality in art</p>
                             </div>
                         </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="post-modern" data-md-file="md_docs3/BANK.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">BANK</h4>
+                                <p class="text-gray-600 text-sm">British postmodern art collective</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="post-modern" data-md-file="md_docs3/Post_Modernism.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Post Modernism</h4>
+                                <p class="text-gray-600 text-sm">Reaction to modernism and modernist ideals</p>
+                            </div>
+                        </div>
+                        <div class="art-movement-card bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm transition-all cursor-pointer"
+                              data-category="post-modern" data-md-file="md_docs3/Transavantgardia.md">
+                            <div class="p-5">
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Transavantgardia</h4>
+                                <p class="text-gray-600 text-sm">Italian postmodern painting movement</p>
+                            </div>
+                        </div>
+                        <!-- More cards follow same pattern -->
                     </div>
                 </div>
             </div>
@@ -845,197 +241,6 @@ body {
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Art movement data
-            const movementData = {
-                'early-northern-renaissance': {
-                    title: 'Early Northern Renaissance',
-                    content: `# Early Northern Renaissance
-
-## Overview
-The Early Northern Renaissance (14th-15th century) was characterized by meticulous detail and vivid realism in painting, particularly in the depiction of the natural world.
-
-## Key Characteristics
-- **Attention to detail**: Minute observations of nature, light, and texture
-- **Oil painting**: Development and mastery of oil paint techniques
-- **Symbolism**: Rich use of religious and secular symbols
-
-### Major Artists
-- Jan van Eyck
-- Rogier van der Weyden
-- Hieronymus Bosch
-
-## Historical Context
-The movement developed in Flanders and other parts of Northern Europe parallel to the Italian Renaissance but with distinct stylistic differences. The Northern Renaissance placed greater emphasis on oil painting techniques and domestic rather than classical scenes.`
-                },
-                'high-renaissance': {
-                    title: 'High Renaissance',
-                    content: `# High Renaissance
-
-## Overview
-The High Renaissance (late 15th-early 16th century) represents the pinnacle of Renaissance art, characterized by harmony, balance, and idealized forms.
-
-## Key Characteristics
-- **Classical influence**: Inspired by ancient Greek and Roman art
-- **Idealization**: Perfect proportions and balance
-- **Perspective**: Mastery of linear perspective
-
-### Major Artists
-- Leonardo da Vinci
-- Michelangelo
-- Raphael
-- Titian
-
-## Historical Context
-Centered in Rome and Florence, the High Renaissance was supported by wealthy patrons including the Catholic Church. Artists achieved unprecedented technical mastery and artistic freedom.`
-                },
-                'baroque': {
-                    title: 'Baroque',
-                    content: `# Baroque
-
-## Overview
-The Baroque (17th century) was a dramatic, emotional style that developed in response to the Protestant Reformation and Catholic Counter-Reformation.
-
-## Key Characteristics
-- **Dramatic lighting**: Strong contrasts of light and dark (chiaroscuro)
-- **Emotional intensity**: Designed to evoke powerful emotions
-- **Motion**: Dynamic compositions with a sense of movement
-
-### Major Artists
-- Caravaggio
-- Peter Paul Rubens
-- Rembrandt
-- Diego Velázquez
-
-## Historical Context
-The Baroque style was used by the Catholic Church to communicate religious themes with direct, emotional impact. It spread across Europe and into Latin America through colonization.`
-                },
-                'impressionism': {
-                    title: 'Impressionism',
-                    content: `# Impressionism
-
-## Overview
-Impressionism (late 19th century) was a radical art movement that focused on capturing fleeting moments and the changing effects of light.
-
-## Key Characteristics
-- **En plein air**: Painting outdoors to capture natural light
-- **Visible brushstrokes**: Loose, rapid brushwork
-- **Modern life**: Scenes of contemporary urban and suburban leisure
-
-### Major Artists
-- Claude Monet
-- Pierre-Auguste Renoir
-- Edgar Degas
-- Camille Pissarro
-
-## Historical Context
-Rejected by the official Paris Salon, the Impressionists held their own exhibitions. Their revolutionary approach to color and light paved the way for modern art.`
-                },
-                'expressionism': {
-                    title: 'Expressionism',
-                    content: `# Expressionism
-
-## Overview
-Expressionism (early 20th century) prioritized emotional experience over physical reality, often distorting form and color to express inner feelings.
-
-## Key Characteristics
-- **Subjective perspective**: Distortion for emotional effect
-- **Vivid colors**: Often non-naturalistic
-- **Intense themes**: Anxiety, alienation, and postwar trauma
-
-### Major Artists
-- Edvard Munch
-- Egon Schiele
-- Wassily Kandinsky
-- Ernst Ludwig Kirchner
-
-## Historical Context
-Emerging in Germany before World War I, Expressionism reflected the alienation and anxiety of modern urban life. It influenced later movements like Abstract Expressionism.`
-                },
-                'cubism': {
-                    title: 'Cubism',
-                    content: `# Cubism
-
-## Overview
-Cubism (early 20th century) revolutionized artistic perspective by presenting multiple viewpoints simultaneously through geometric fragmentation.
-
-## Key Characteristics
-- **Multiple perspectives**: Objects shown from several angles at once
-- **Geometric forms**: Reduction to cubes, spheres, and cones
-- **Limited color palette**: Often monochromatic tones
-
-### Major Artists
-- Pablo Picasso
-- Georges Braque
-- Juan Gris
-
-## Historical Context
-Developed in Paris by Picasso and Braque, Cubism broke from traditional perspective and representation. It influenced architecture, sculpture, and later abstract art.`
-                },
-                'pop-art': {
-                    title: 'Pop Art',
-                    content: `# Pop Art
-
-## Overview
-Pop Art (1950s-60s) incorporated imagery from popular and commercial culture, blurring boundaries between high and low art.
-
-## Key Characteristics
-- **Consumer culture**: Inspired by advertising, comics, and products
-- **Bold colors**: Flat, graphic look often using Ben-Day dots
-- **Irony and parody**: Playful critique of mass media
-
-### Major Artists
-- Andy Warhol
-- Roy Lichtenstein
-- Richard Hamilton
-- Jasper Johns
-
-## Historical Context
-Emerged in Britain and America responding to postwar consumerism. Challenged traditional notions of artistic originality and authorship.`
-                },
-                'conceptual-art': {
-                    title: 'Conceptual Art',
-                    content: `# Conceptual Art
-
-## Overview
-Conceptual Art (1960s-70s) emphasizes ideas over aesthetic and material concerns, often using text, documentation, or ephemeral materials.
-
-## Key Characteristics
-- **Dematerialization**: Art as idea rather than object
-- **Text-based**: Language as primary medium
-- **Critical engagement**: Questions art institutions and definitions
-
-### Major Artists
-- Sol LeWitt
-- Joseph Kosuth
-- Yoko Ono
-- Lawrence Weiner
-
-## Historical Context
-Developed as a reaction against commercialism in art and formalism of Abstract Expressionism. The movement expanded definitions of what could be considered art.`
-                },
-                'feminist-art': {
-                    title: 'Feminist Art',
-                    content: `# Feminist Art
-
-## Overview
-Feminist Art (1960s-present) emerged alongside the feminist movement, challenging patriarchal structures in art and society.
-
-## Key Characteristics
-- **Gender politics**: Addresses issues of power, representation, and equality
-- **Alternative media**: Uses craft, performance, and video
-- **Personal as political**: Autobiographical explorations
-
-### Major Artists
-- Judy Chicago
-- Barbara Kruger
-- Cindy Sherman
-- Guerilla Girls
-
-## Historical Context
-Grew from feminist activism of the 1960s-70s, highlighting marginalization of women artists. Continues to evolve with intersectional approaches.`
-                }
-            };
-
             // DOM elements
             const homeView = document.getElementById('home-view');
             const detailView = document.getElementById('detail-view');
@@ -1052,13 +257,9 @@ Grew from feminist activism of the 1960s-70s, highlighting marginalization of wo
             const artMovementCards = document.querySelectorAll('.art-movement-card');
             artMovementCards.forEach(card => {
                 card.addEventListener('click', function() {
-                    const movementName = this.getAttribute('data-movement');
-                    // Show loading spinner initially
-                    loadingSpinner.style.display = 'flex';
-                    // Use setTimeout to simulate loading delay (remove in production)
-                    setTimeout(() => {
-                        loadMovementContent(movementName);
-                    }, 300);
+                    const mdFile = this.getAttribute('data-md-file');
+                    const title = this.querySelector('h4').textContent;
+                    loadMarkdownContent(mdFile, title);
                 });
             });
 
@@ -1086,21 +287,31 @@ Grew from feminist activism of the 1960s-70s, highlighting marginalization of wo
                 });
             });
 
-            // Function to load and display movement content
-            function loadMovementContent(movementName) {
+            // Function to load and display markdown content
+            function loadMarkdownContent(mdFile, title) {
                 homeView.classList.add('hidden');
                 detailView.classList.remove('hidden');
+                loadingSpinner.style.display = 'flex';
+                markdownContent.innerHTML = '';
                 errorMessage.classList.add('hidden');
-                
-                if (movementData[movementName]) {
-                    const movement = movementData[movementName];
-                    movementTitle.textContent = movement.title;
-                    renderMarkdown(movement.content);
-                    loadingSpinner.style.display = 'none';
-                } else {
-                    showError('Movement Not Found', 'The requested art movement could not be found.');
-                    loadingSpinner.style.display = 'none';
-                }
+                movementTitle.textContent = title;
+
+                // Correct GitHub raw URL path structure
+                const githubUsername = 'your-github-username'; // Replace with your actual GitHub username
+                const repoName = 'your-repo-name'; // Replace with your actual repo name
+                const branchName = 'main'; // Or your branch name
+                const rawFileUrl = `https://raw.githubusercontent.com/${githubUsername}/${repoName}/${branchName}/${mdFile}`;
+
+                fetchMarkdownFile(rawFileUrl)
+                    .then(markdownText => {
+                        renderMarkdown(markdownText);
+                        loadingSpinner.style.display = 'none';
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        showError('Content Not Available', `Could not load the requested art movement information. The file may not exist or there may be a network issue. Error: ${error.message}`);
+                        loadingSpinner.style.display = 'none';
+                    });
             }
 
             // Function to show error message
@@ -1109,6 +320,28 @@ Grew from feminist activism of the 1960s-70s, highlighting marginalization of wo
                 errorText.textContent = message;
                 errorMessage.classList.remove('hidden');
                 markdownContent.classList.add('hidden');
+            }
+
+            // Improved fetch function with error handling
+            function fetchMarkdownFile(url) {
+                return new Promise((resolve, reject) => {
+                    fetch(url)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(`HTTP error! Status: ${response.status}`);
+                            }
+                            return response.text();
+                        })
+                        .then(text => {
+                            if (text.includes('404: Not Found')) {
+                                throw new Error('File not found on GitHub');
+                            }
+                            resolve(text);
+                        })
+                        .catch(error => {
+                            reject(error);
+                        });
+                });
             }
 
             // Function to render markdown as HTML
@@ -1120,18 +353,20 @@ Grew from feminist activism of the 1960s-70s, highlighting marginalization of wo
                     .replace(/^## (.*$)/gm, '<h2 class="text-xl font-semibold my-3 ml-4" data-level="2"><span class="toggle-icon">▼</span> $1</h2>')
                     .replace(/^### (.*$)/gm, '<h3 class="text-lg font-medium my-2 ml-8" data-level="3"><span class="toggle-icon">▼</span> $1</h3>')
                     // Paragraphs
-                    .replace(/^(?!<|#|<\/|-\s|\d+\.)(.*$)/gm, '<p class="my-2 text-gray-700 leading-relaxed">$1</p>')
+                    .replace(/^(?!<|#|<\/|-\s|\d+\.)(.*$)/gm, '<p class="my-2">$1</p>')
                     // Lists
-                    .replace(/^- (.*$)/gm, '<li class="ml-12 my-1 text-gray-700">$1</li>')
+                    .replace(/^- (.*$)/gm, '<li class="ml-12 my-1">$1</li>')
                     // Bold
-                    .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>')
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
                     // Italic
-                    .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
+                    .replace(/\*(.*?)\*/g, '<em>$1</em>')
                     // Links
-                    .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="text-indigo-600 hover:underline" target="_blank">$1</a>');
+                    .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="text-indigo-600 hover:underline" target="_blank">$1</a>')
+                    // Images
+                    .replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" class="my-4 max-w-full h-auto rounded shadow">');
 
                 // Wrap lists in ul tags (simplified)
-                html = html.replace(/(<li.*<\/li>)/g, '<ul class="list-disc pl-6 my-2">$1</ul>');
+                html = html.replace(/(<li.*<\/li>)/g, '<ul class="list-disc pl-8">$1</ul>');
 
                 markdownContent.innerHTML = html;
                 markdownContent.classList.remove('hidden');
@@ -1143,13 +378,13 @@ Grew from feminist activism of the 1960s-70s, highlighting marginalization of wo
                     if (header.tagName === 'H2' || header.tagName === 'H3') {
                         const level = parseInt(header.getAttribute('data-level'));
                         let next = header.nextElementSibling;
-                                            
+                        
                         while (next) {
                             if (next.tagName && next.tagName.match(/^H[1-6]$/)) {
                                 const nextLevel = parseInt(next.getAttribute('data-level'));
                                 if (nextLevel <= level) break;
                             }
-                                                    
+                            
                             next.classList.add('content-hidden');
                             next = next.nextElementSibling;
                         }
@@ -1170,9 +405,9 @@ Grew from feminist activism of the 1960s-70s, highlighting marginalization of wo
                                 const nextLevel = parseInt(next.getAttribute('data-level'));
                                 if (nextLevel <= level) break;
                             }
-                                                    
+                            
                             next.classList.toggle('content-hidden');
-                                                    
+                            
                             // If this is being closed, also close any child headers
                             if (icon.classList.contains('rotated') && next.tagName && next.tagName.match(/^H[1-6]$/)) {
                                 const nextLevel = parseInt(next.getAttribute('data-level'));
@@ -1183,7 +418,7 @@ Grew from feminist activism of the 1960s-70s, highlighting marginalization of wo
                                     }
                                 }
                             }
-                                                    
+                            
                             next = next.nextElementSibling;
                         }
                     });
