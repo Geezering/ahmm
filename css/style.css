@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f9f9f9;
+  color: #333;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+h1, h2 {
+  color: #444;
+}
+.categories {
+  margin-bottom: 30px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 8px 0;
+}
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.markdown-content {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+/* Accordion styles for headings */
+.markdown-content h1, .markdown-content h2, .markdown-content h3 {
+  cursor: pointer;
+  padding: 5px 0;
+}
+.markdown-content h1::before {
+  content: "▼ ";
+}
+.markdown-content h2, .markdown-content h3, .markdown-content ul, .markdown-content p {
+  display: none;
+  margin-left: 20px;
+}
+.markdown-content h1.active ~ h2,
+.markdown-content h2.active ~ h3,
+.markdown-content h2.active ~ ul,
+.markdown-content h3.active ~ ul,
+.markdown-content h3.active ~ p {
+  display: block;
+}
+/* For future images */
+img {
+  max-width: 100%;
+  height: auto;
+}
