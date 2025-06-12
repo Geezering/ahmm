@@ -51,50 +51,29 @@
 - Their new techniques changed art forever, making paintings and frescoes feel alive, believable, and full of meaning
 # Three Short Points for Each Artist
 ## Giotto
-1
-- Created lifelike, emotional figures
-2
-- Used shading and perspective for depth
-3
-- Told clear, dramatic stories in his art
+1. Created lifelike, emotional figures
+2. Used shading and perspective for depth
+3. Told clear, dramatic stories in his art
 ## Duccio
-1
-- Bridged Gothic and Renaissance styles
-2
-- Painted detailed narrative panels
-3
-- Used rich colour and gentle realism
+1. Bridged Gothic and Renaissance styles
+2. Painted detailed narrative panels
+3. Used rich colour and gentle realism
 ## Masaccio
-1
-- Mastered linear perspective for 3D space
-2
-- Painted realistic, anatomically correct people
-3
-- Brought emotion and humanity to religious scenes 
+1. Mastered linear perspective for 3D space
+2. Painted realistic, anatomically correct people
+3. Brought emotion and humanity to religious scenes 
 ## Uccello
-1
-- Explored mathematical perspective in art 
-2
-- Mixed Gothic detail with Renaissance science
-3
-- Created dynamic, energetic compositions
+1. Explored mathematical perspective in art 
+2. Mixed Gothic detail with Renaissance science
+3. Created dynamic, energetic compositions
 ## The impact
 - The Early Renaissance was a time of huge change, where artists like Giotto, Duccio, Masaccio, and Uccello set the foundations for modern art by making paintings more realistic, emotional, and connected to the real world[1][3][4][7]
 # Sources
-1
-- [[1] Early Renaissance Art and Architecture | TheArtStory](https://www.theartstory.org/movement/early-renaissance/)
-2
-- [[2] Renaissance art | Definition, Characteristics, Style, Examples, & Facts](https://www.britannica.com/art/Renaissance-art)
-3
-- [[3] Renaissance art - Wikipedia](https://en.wikipedia.org/wiki/Renaissance_art)
-4
-- [[4] Renaissance Art (1400 -1500) - WordPress.com](https://classicalart.wordpress.com/renaissance/)
-5
-- [[5] Renaissance - Wikipedia](https://en.wikipedia.org/wiki/Renaissance)
-6
-- [[6] Italian Renaissance Art (1400–1600) | Art History Teaching Re# Sources](https://arthistoryteachingre# Sources.org/lessons/italian-renaissance-art-1400-1600/)
-7
-- [[7] When Was the Renaissance in Art? | TheCollector](https://www.thecollector.com/when-was-the-early-high-late-renaissance-art/)
-8
-- [[8] Florence and Central Italy, 1400–1600 A.D
-- | Chronology](https://www.metmuseum.org/toah/ht/08/eustc.html)
+1. [[1] Early Renaissance Art and Architecture | TheArtStory](https://www.theartstory.org/movement/early-renaissance/)
+2. [[2] Renaissance art | Definition, Characteristics, Style, Examples, & Facts](https://www.britannica.com/art/Renaissance-art)
+3. [[3] Renaissance art - Wikipedia](https://en.wikipedia.org/wiki/Renaissance_art)
+4. [[4] Renaissance Art (1400 -1500) - WordPress.com](https://classicalart.wordpress.com/renaissance/)
+5. [[5] Renaissance - Wikipedia](https://en.wikipedia.org/wiki/Renaissance)
+6. [[6] Italian Renaissance Art (1400–1600) | Art History Teaching Re# Sources](https://arthistoryteachingre# Sources.org/lessons/italian-renaissance-art-1400-1600/)
+7. [[7] When Was the Renaissance in Art? | TheCollector](https://www.thecollector.com/when-was-the-early-high-late-renaissance-art/)
+8. [[8] Florence and Central Italy, 1400–1600 A.D - | Chronology](https://www.metmuseum.org/toah/ht/08/eustc.html)
