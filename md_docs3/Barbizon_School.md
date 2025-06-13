@@ -8,9 +8,11 @@
 - Mid-19th-century France was experiencing rapid industrialisation and urbanisation, leading to nostalgia for rural life[8]
 - The movement was partly a reaction against the strict rules of the French Academy and the hierarchy that put history painting above landscape[5][8]
 # Relevant writers and Composers:
-## Writers: George Sand (who lived near Barbizon and celebrated rural France), Victor Hugo (Romantic writer)
+## Writers: 
+- George Sand (who lived near Barbizon and celebrated rural France)
+- Victor Hugo (Romantic writer)
 ## Composers: - Hector Berlioz
-- Charles Gounod, who were active in France and sometimes inspired by nature
+- Charles Gounod, who was active in France and sometimes inspired by nature
 ## Contemporary Inventions and Technology: 
 - Portable paint tubes (allowed artists to paint outdoors, or *en plein air*)[1][8]
 - Early photography (influenced ideas about realism and capturing the world as it is)
@@ -56,26 +58,17 @@ Barbizon School artists:
 - Their work was a reaction against the old-fashioned art rules of the time and helped pave the way for Impressionism[1][5][8]
 # Three Short Points for Each Artist
 ## Théodore Rousseau
-1
-- Painted realistic, atmospheric landscapes, especially forests
-- 2
-- Worked outdoors to capture changing light and mood
-- 3
-- Valued ordinary rural scenes over dramatic or historical subjects
+1. Painted realistic, atmospheric landscapes, especially forests
+2. Worked outdoors to capture changing light and mood
+3. Valued ordinary rural scenes over dramatic or historical subjects
 ## Jean-François Millet
-1
-- Focused on rural workers, showing their dignity and daily life
-- 2
-- Used earthy colours and soft brushwork for realism
-- 3
-- Included social commentary about people’s relationship with the land
+1. Focused on rural workers, showing their dignity and daily life
+2. Used earthy colours and soft brushwork for realism
+3. Included social commentary about people’s relationship with the land
 ## Charles-François Daubigny
-1
-- Painted rivers and fields with loose, expressive brushwork
-- 2
-- Captured light and atmosphere by painting quickly outdoors
-- 3
-- Influenced the next generation, including the Impressionists
+1. Painted rivers and fields with loose, expressive brushwork
+2. Captured light and atmosphere by painting quickly outdoors
+3. Influenced the next generation, including the Impressionists
 ## The Barbizon School 
 - Made landscape painting important in its own right and inspired later artists to look at the world around them with fresh eyes
 # Sources
