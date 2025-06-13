@@ -1,4 +1,4 @@
-Rococo period
+# Rococo period
 ## Key Themes, Ideas, and Artistic Aspects
 ### Lightness, Elegance, and Playfulness
 - Rococo art is known for its light, delicate, and graceful style
@@ -14,28 +14,27 @@ Rococo period
 - The focus was on enjoyment and fantasy, reflecting the tastes of those who commissioned the art
 # Contextual information
 ## Main location(s):
-Paris, France (origin), later spreading to Italy, Central Europe (especially Austria and Germany), and England
+- Paris, France (origin), later spreading to Italy, Central Europe (especially Austria and Germany), and England
 ## Relevant previous art movements:
-Baroque (Rococo was a lighter, more playful reaction to the grand and dramatic Baroque style)
+- Baroque (Rococo was a lighter, more playful reaction to the grand and dramatic Baroque style)
 ## Relevant culture and politics:
-The period was dominated by the French aristocracy under Louis XV
+- The period was dominated by the French aristocracy under Louis XV
 - Society was divided between the wealthy elite and the poor, leading to growing social tensions that would later erupt in the French Revolution
 - Rococo art reflected the pleasures and privileges of the upper class, often ignoring the struggles of ordinary people
 # Relevant writers and Composers:
 ## Writers: Voltaire, Denis Diderot (philosophers of the Enlightenment, though often critical of Rococo excess)
 ## Composers:
- François Couperin, Jean-Philippe Rameau, and later Wolfgang Amadeus Mozart (whose early works fit the elegant, light style of Rococo)
+- François Couperin, Jean-Philippe Rameau, and later Wolfgang Amadeus Mozart (whose early works fit the elegant, light style of Rococo)
 # Contemporary inventions and technology:
-Advances in porcelain production (notably at the Sèvres factory)
-Improved printing and engraving techniques
-New methods for making mirrors and gilded furniture
+- Advances in porcelain production (notably at the Sèvres factory)
+- Improved printing and engraving techniques
+- New methods for making mirrors and gilded furniture
 ## Typical fashions of the day for men and women:
 - **Men:** Knee-length breeches, silk stockings, embroidered waistcoats, powdered wigs, lace cuffs, and tricorn hats
 - **Women:**  Wide, panniered dresses in pastel colours, elaborate lace and ribbons, powdered hair styled high, and ornate accessories
-**$1:** Fashion was extravagant, decorative, and designed to show off wealth and status
-- Artists and Period
-**$1:**
-Circa 1730–1789 (Rococo’s peak years; some # Sources give slightly earlier or later dates)
+- **Both:** Fashion was extravagant, decorative, and designed to show off wealth and status
+## Artists and Period
+- Circa 1730–1789 (Rococo’s peak years; some # Sources give slightly earlier or later dates)
 - Key Artists:
 ### Jean-Antoine Watteau
 - Watteau was a pivotal French painter whose work marks the transition from Baroque to Rococo, celebrated for his invention of the “fête galante”—elegant scenes of aristocratic leisure in idyllic, dreamlike settings
@@ -79,12 +78,12 @@ Circa 1730–1789 (Rococo’s peak years; some # Sources give slightly earlier o
 - Tiepolo’s international commissions and inventive spirit made him one of the most celebrated decorative painters of his age
 The porcelain factory at Sèvres (not an artist, but important for Rococo decorative arts)
 # Three Short Points for Students
-Rococo art is light, elegant, and playful, using pastel colours, flowing curves, and lots of decorative detail to create a sense of fun and beauty
+- Rococo art is light, elegant, and playful, using pastel colours, flowing curves, and lots of decorative detail to create a sense of fun and beauty
 - The style is inspired by nature and features asymmetrical designs with shells, flowers, and other organic motifs, making art and interiors lively and ornate
 - Rococo celebrates the luxurious, carefree lives of the aristocracy, showing scenes of romance, parties, and fantasy, and reflecting the tastes of the wealthy elite before the French Revolution
 # Glossary for Students:
-**$1:** Not the same on both sides; uneven or irregular
-- **$1:** The highest social class, often wealthy and powerful
-- **$1:** A repeated design or pattern
-- Pastel colours: Soft, light shades like pale pink, blue, or yellow
-- **$1:** A fine, white ceramic material used for delicate objects and decoration.
+- **Asymmetrical:** Not the same on both sides; uneven or irregular
+- **Aristocracy:** The highest social class, often wealthy and powerful
+- **Tessellation:** A repeated design or pattern
+- **Pastel colours:** Soft, light shades like pale pink, blue, or yellow
+- **Porcelain:** A fine, white ceramic material used for delicate objects and decoration.
