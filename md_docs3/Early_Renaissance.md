@@ -1,6 +1,8 @@
-# Early Renaissance (1450–1550): Key Facts and Context
+# Early Renaissance (1450–1550): 
+- Key Facts and Context
 ## Main location(s):  
-- Florence and other cities in central Italy were the heart of the Early Renaissance, with Florence especially known for its artistic innovation and the support of patrons like the Medici family[1][8]
+- Florence and other cities in central Italy were the heart of the Early Renaissance
+- Florence was especially known for its artistic innovation and the support of patrons like the Medici family[1][8]
 ## Relevant previous art movements: 
 - Gothic and Romanesque art (characterised by flat, stylised figures and religious themes)
 - Proto-Renaissance (artists like Giotto and Duccio began to move towards naturalism and three-dimensionality in the 1300s)[1]
@@ -9,9 +11,13 @@
 - Growth of wealthy merchant families (like the Medici) who became important patrons of the arts[1][8]
 - Increasing interest in science, mathematics, and anatomy, which influenced artists’ approach to realism and perspective[1][5]
 # Relevant writers and Composers:
-## Writers: Dante Alighieri, Petrarch, and Boccaccio (early Humanist writers); Leon Battista Alberti (art theorist)
+## Writers: 
+- Dante Alighieri
+- Petrarch, and Boccaccio (early Humanist writers);
+- Leon Battista Alberti (art theorist)
 ## Composers:
- Guillaume Dufay and Josquin des Prez (early Renaissance composers who brought innovation to sacred and secular music)
+ - Guillaume Dufay
+ - Josquin des Prez (early Renaissance composers who brought innovation to sacred and secular music)
 ## Contemporary Inventions and Technology: 
 - Development of linear perspective (using mathematics to create the illusion of depth on a flat surface)[1][4]
 - Advances in anatomy and scientific observation, leading to more realistic human figures[5]
@@ -21,21 +27,22 @@
 - **Men:** Doublets (close-fitting jackets), hose (tight trousers), long tunics, and hats or caps
 - **Women:**  Long dresses with fitted bodices, high waistlines, and elaborate sleeves; hair often covered or braided with decorative nets or veils
 # Artists and Period:  
-- Giotto (active c
-- 1300–1337, often considered Proto-Renaissance but hugely influential on the Early Renaissance)[1]
-- Duccio (active c
-- 1278–1319, Proto-Renaissance, but his innovations set the stage for later artists)
-- Masaccio (1401–1428, a key Early Renaissance painter)[1][3][6]
-- Paolo Uccello (1397–1475, Early Renaissance, famous for his use of perspective)[1][4]
+- Giotto (active c. 1300–1337), often considered Proto-Renaissance but hugely influential on the Early Renaissance [1]
+- Duccio (active c. 1278–1319), Proto-Renaissance, but his innovations set the stage for later artists
+- Masaccio (1401–1428), a key Early Renaissance painter[1][3][6]
+- Paolo Uccello (1397–1475), Early Renaissance, famous for his use of perspective [1][4]
 ## Key Themes, Ideas, and Artistic Aspects
 ### Giotto
-- **Naturalism and Emotion:** Giotto broke away from the flat, stylised figures of medieval art, giving his figures weight, volume, and real human emotion
+#### Naturalism and Emotion:
+  Giotto broke away from the flat, stylised figures of medieval art, giving his figures weight, volume, and real human emotion
 - His frescoes, like those in the Scrovegni Chapel, show people with believable gestures and faces[1]
 - **Three-Dimensional Space:** He was one of the first to create the illusion of depth, making figures appear to stand in real space rather than float on a flat background[1]
 - **Storytelling:** Giotto’s scenes are clear and dramatic, making complex religious stories easy to understand through expressive poses and simple, powerful compositions
 ### Duccio
-- **Transition from Medieval to Renaissance:** Duccio’s work bridges the gap between the Gothic style and the new realism of the Renaissance, introducing softer lines and more naturalistic figures
-- **Detailed Narrative Panels:** He often painted large altarpieces made up of many small panels, each telling a different part of a religious story
+## Transition from Medieval to Renaissance:
+- Duccio’s work bridges the gap between the Gothic style and the new realism of the Renaissance, introducing softer lines and more naturalistic figures
+## Detailed Narrative Panels: 
+- He often painted large altarpieces made up of many small panels, each telling a different part of a religious story
 - **Use of Colour and Texture:** Duccio used rich colours and delicate patterns to give his paintings a sense of beauty and luxury, while still moving towards more realistic space and figures
 ### Masaccio
 - **Pioneering Perspective:** Masaccio was the first to use linear perspective consistently, making his paintings look convincingly three-dimensional[1][4]
