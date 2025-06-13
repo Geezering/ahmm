@@ -46,6 +46,11 @@ a:hover {
 .markdown-content h1::before {
   content: "&#8711;";
 }
+
+.markdown-content h1{
+  background-color:##e1e9fc;
+  border-radius: 0.1em;
+}
 .markdown-content h2, .markdown-content h3, .markdown-content ul, .markdown-content p {
   display: none;
   margin-left: 20px;
