@@ -10,15 +10,18 @@
 - Artists aimed to create art for social and political purposes, rejecting “art for art’s sake” in favour of practical, useful art that would help shape the new world[1][7][9]
 - The movement was deeply connected to Communist ideals and the industrialisation of society
 # Relevant writers and Composers:
-## Writers: Vladimir Mayakovsky (poet and propagandist for the revolution), Aleksei Gan (theorist who wrote about Constructivism)[7]
+## Writers: 
+- Vladimir Mayakovsky (poet and propagandist for the revolution)
+- Aleksei Gan (theorist who wrote about Constructivism)[7]
 ## Composers:
- Arseny Avraamov and other early Soviet experimental composers who used industrial and mechanical sounds
+ Arseny Avraamov 
+ - Other early Soviet experimental composers who used industrial and mechanical sounds
 ## Contemporary Inventions and Technology: 
 - Industrial materials (steel, glass, wood, plastic) and mass production techniques[2][3]
 - Use of photography, photomontage (cutting and combining photos), and graphic design in posters and propaganda[9]
 - Advances in architecture and engineering, such as Tatlin’s Tower (a never-built design using modern materials and technology)[9]
 # Typical Fashions of the Day: 
-- **Men:** Simple, functional clothing-often workers’ uniforms, tunics, and boots
+- **Men:** Simple, functional clothing- often workers’ uniforms, tunics, and boots
 - **Women:**  Practical, androgynous styles-loose dresses, work shirts, and headscarves, reflecting the movement’s focus on utility and equality
 # Artists and Period:  
 - 1917–1925 (main period, though influence continued later)[1]
@@ -58,66 +61,63 @@
 - Helped develop the idea that art should be functional and serve society’s needs
 ## In Simple Terms for Students
 - **Constructivism:**
-- Was about using art to help build a new, modern society, especially after the Russian Revolution
-- Artists used simple geometric shapes, industrial materials, and practical designs to make art useful for everyone-not just for decoration, but for posters, buildings, clothes, and everyday objects[1][2][7]
+- It was about using art to help build a new, modern society, especially after the Russian Revolution
+- Artists used simple geometric shapes, industrial materials, and practical designs to make art useful for everyone, not just for decoration, but for posters, buildings, clothes, and everyday objects[1][2][7]
 - Their work was bold, abstract, and often aimed at spreading political ideas or improving daily life
 # Three Short Points for Each Artist
 ## El Lissitzky
-1
-- Used bold shapes and colours for revolutionary posters
-- 2
-- Made art to communicate political messages
-- 3
-- Influenced modern graphic design and exhibitions
+1. . 
+Used bold shapes and colours for revolutionary posters
+2. . 
+Made art to communicate political messages
+3. 
+Influenced modern graphic design and exhibitions
 ## Alexander Rodchenko
-1
-- Used simple, industrial materials and geometric forms
-- 2
-- Designed practical objects and posters for society
-- 3
-- Created dynamic, modern compositions
+1. Used simple, industrial materials and geometric forms
+2. Designed practical objects and posters for society
+3. Created dynamic, modern compositions
 ## Lyubov Popova
-1
-- Combined painting, theatre, and textiles with abstract patterns
-- 2
-- Built up images from basic shapes
-- 3
-- Wanted art to be useful and accessible
+1. Combined painting, theatre, and textiles with abstract patterns
+2. Built up images from basic shapes
+3. Wanted art to be useful and accessible
 ## Naum Gabo
-1
-- Made abstract sculptures with modern materials
-- 2
-- Focused on space and movement
-- 3
-- Helped write Constructivist ideas into a manifesto
+1. Made abstract sculptures with modern materials
+2. Focused on space and movement
+3. Helped write Constructivist ideas into a manifesto
+## El Lissitzky
+1. Used bold shapes and colours for revolutionary posters
+2. Made art to communicate political messages
+3. Influenced modern graphic design and exhibitions
+## Alexander Rodchenko
+1. Used simple, industrial materials and geometric forms
+2. Designed practical objects and posters for society
+3. Created dynamic, modern compositions
+## Lyubov Popova
+1. Combined painting, theatre, and textiles with abstract patterns
+2. Built up images from basic shapes
+3. Wanted art to be useful and accessible
+## Naum Gabo
+1. Made abstract sculptures with modern materials
+2. Focused on space and movement
+3. Helped write Constructivist ideas into a manifesto
+
 ## Varvara Stepanova
-1
-- Designed practical, patterned textiles and clothing
-- 2
-- Integrated art into daily life
-- 3
-- Used bold geometry and colour
+1. Designed practical, patterned textiles and clothing
+2. Integrated art into daily life
+3. Used bold geometry and colour
 ## Vladimir Tatlin
-1
-- Founded Constructivism and designed Tatlin’s Tower
-- 2
-- Used industrial materials and engineering
-- 3
-- Believed art should be functional and collective
+1. Founded Constructivism and designed Tatlin’s Tower
+2. Used industrial materials and engineering
+3. Believed art should be functional and collective
 ## Stenberg brothers
-1
-- Created dynamic theatre posters and sets
-- 2
-- Used photomontage and bold designs
-- 3
-- Defined the look of Soviet cinema and theatre
+1. Created dynamic theatre posters and sets
+2. Used photomontage and bold designs
+3. Defined the look of Soviet cinema and theatre
 ## Karl Ioganson
-1
-- Built abstract sculptures from industrial materials
-- 2
-- Explored structure and construction
-- 3
-- Saw art as part of technology and society
+1. Built abstract sculptures from industrial materials
+2. Explored structure and construction
+3. Saw art as part of technology and society
+
 ## In summary:  
 - Constructivism was a revolutionary art movement that used modern materials and bold, geometric designs to make art practical, political, and useful for building a new society[1][2][7]
 # Sources
