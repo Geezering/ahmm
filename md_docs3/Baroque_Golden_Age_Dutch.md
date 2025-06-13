@@ -50,7 +50,7 @@ Renaissance (for perspective and realism, but baroque added more drama and emoti
 - Leading landscape painter, famous for dramatic skies, windmills, forests, and rivers that celebrate the Dutch countryside
 - Used light and weather effects to create mood and atmosphere, often making nature look powerful or serene
 - His landscapes reflect pride in the Dutch land and a close observation of the natural world[1][3]
-### Johannes vVrmeer
+### Johannes Vermeer
 - Painted quiet, intimate scenes of everyday life, often showing women at work in sunlit rooms
 - Mastered the use of light, creating a soft, almost magical atmosphere in his interiors
 - his attention to detail and subtle symbolism invite viewers to look closely and find deeper meaning in ordinary moments[3][8]
@@ -66,10 +66,11 @@ Renaissance (for perspective and realism, but baroque added more drama and emoti
 - **Baroque:** Catholic church’s influence (especially in Italy and Spain), absolute monarchies, religious conflicts
 # Relevant writers and Composers:
 ## Writers:
- Joost van den Vondel (Dutch poet and playwright), John Milton (English poet)
+- Joost van den Vondel (Dutch poet and playwright)
+- John Milton (English poet)
 ## Composers:
- - Johann Sebastian Bach
- = Claudio Monteverdi
+- Johann Sebastian Bach
+- Claudio Monteverdi
 - Henry Purcell
 ## Contemporary Inventions And Technology: 
 - Development of oil painting techniques and systematic layering for realism[6]
