@@ -44,7 +44,7 @@ a:hover {
   padding: 5px 0;
 }
 .markdown-content h1::before {
-  content: "∇";
+  content: "∇ ";
 }
 
 .markdown-content h1{
