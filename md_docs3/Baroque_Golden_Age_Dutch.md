@@ -18,16 +18,19 @@ Dutch Republic (especially Amsterdam, Haarlem, Delft), Flanders (Antwerp), Italy
 ## Relevant previous art movements:
 Renaissance (for perspective and realism, but baroque added more drama and emotion.
 ## Relevant culture and politics:
-Dutch Golden Age: Economic boom, rise of a wealthy merchant class, religious independence from catholic spain, and a focus on secular (non-religious) subjects
-- **$1:** Catholic church’s response to the reformation (counter-reformation), using art to inspire faith and awe
+- Dutch Golden Age: Economic boom, rise of a wealthy merchant class, religious independence from catholic spain, and a focus on secular (non-religious) subjects
+- **Counter Reformation:** The Catholic church’s response to the Reformation (counter-reformation), using art to inspire faith and awe
 # Relevant writers and Composers:
-## Writers: Joost van den Vondel (Dutch playwright), John Milton
+## Writers: 
+- Joost van den Vondel (Dutch playwright)
+- John Milton
 ## Composers:
- Johann sebastian bach, claudio monteverdi, heinrich schütz
+ - Johann Sebastian Bach
+ - Claudio Monteverdi, Heinrich Schütz
 # Contemporary inventions and technology:
-Advances in oil painting and pigment production
-Use of the camera obscura (an early optical device for drawing)
-printing press and mapmaking
+- Advances in oil painting and pigment production
+- Use of the camera obscura (an early optical device for drawing)
+- Printing press and mapmaking
 ## Typical fashions of the day for men and women:
 - **Men:** Doublets, breeches, lace collars, wide-brimmed hats, and boots
 - **Women:**  Long dresses with fitted bodices, lace collars or ruffs, and elaborate headwear
@@ -65,7 +68,9 @@ printing press and mapmaking
 ## Writers:
  Joost van den Vondel (Dutch poet and playwright), John Milton (English poet)
 ## Composers:
- Johann sebastian bach, claudio monteverdi, henry purcell
+ - Johann Sebastian Bach
+ = Claudio Monteverdi
+- Henry Purcell
 ## Contemporary Inventions And Technology: 
 - Development of oil painting techniques and systematic layering for realism[6]
 - Use of the camera obscura (early optical device) for accurate drawing
@@ -123,7 +128,7 @@ printing press and mapmaking
 2. Bold use of light and shadow
 3. Realistic emotion and storytelling
 ## Diego Velázquez
-1. Realistic portraits of spanish royalty
+1. Realistic portraits of Spanish royalty
 2. Loose, confident brushwork
 3. Subtle use of light and perspective
 ## Francisco Zurbarán
