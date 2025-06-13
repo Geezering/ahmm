@@ -39,33 +39,22 @@
 - Used simple geometric forms and primary colours to make functional objects that were also works of art[6]
 - Showed how De Stijl ideas could be applied to everyday life, not just painting[4][6]
 ## In Simple Terms for Students
-- De Stijl
- artists wanted to create a completely new style for a new, modern world after World War I
+- De Stijl artists wanted to create a completely new style for a new, modern world after World War I
 - They used only straight lines, rectangles, and the three primary colours, plus black, white, and grey, to keep things simple and universal
 - Their goal was to bring harmony, order, and clarity to art, design, and even architecture, believing this could help create a better society
 # Three Short Points for Each Artist
 ## Theo van Doesburg
-1
-- Used strict geometry and primary colours for a universal style
-- 2
-- Connected art, design, and architecture
-- 3
-- Spread De Stijl ideas through writing and collaboration
+1. Used strict geometry and primary colours for a universal style
+2. Connected art, design, and architecture
+3. Spread De Stijl ideas through writing and collaboration
 ## Piet Mondrian
-1
-- Painted with only straight lines and primary colours
-- 2
-- Sought perfect balance and harmony
-- 3
-- Believed art could express universal, spiritual truths
+1. Painted with only straight lines and primary colours
+2. Sought perfect balance and harmony
+3. Believed art could express universal, spiritual truths
 ## Gerrit Rietveld
-1
-- Designed furniture and buildings using De Stijl rules
-- 2
-- Used simple shapes and colours for practical beauty
-- 3
-- Made art and design part of everyday life
-- |
+1. Designed furniture and buildings using De Stijl rules
+2. Used simple shapes and colours for practical beauty
+3. Made art and design part of everyday life
 ## De Stijl was a movement: 
 - That aimed to make art and design simple, clear, and universal, hoping to improve society by creating harmony and order in everything from paintings to buildings
 # Sources
