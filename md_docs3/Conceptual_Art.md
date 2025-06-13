@@ -68,13 +68,13 @@
 ### Adrian Piper
 - Adrian Piper uses performance, text, and installation to address issues of race, gender, and identity within the framework of Conceptual art
 - Her work often involves direct engagement with the audience, prompting self-reflection and social critique
-- Piper’s intellectual rigor and personal vulnerability have made her a pioneering voice in Conceptual and political art
+- Piper’s intellectual rigour and personal vulnerability have made her a pioneering voice in Conceptual and political art
 ### Felix Gonzalez-Torres
 - Felix Gonzalez-Torres created minimalist installations using everyday materials like sweets, clocks, and light bulbs to explore themes of love, loss, and memory
 - His works invite audience participation, allowing viewers to take pieces away and thus engage with the concept of impermanence
 - Gonzalez-Torres’s art is deeply emotional and conceptual, focusing on the power of simple gestures and shared experiences
 ### Dan Graham
-- Dan Graham’s art investigates the relationship between viewer, artwork, and architectural space, often using glass, mirrors, and video
+- Dan Graham’s art investigates the relationship between the viewer,the artwork, and the architectural space, often using glass, mirrors, and video
 - He is known for his theoretical writings and installations that challenge perceptions of time, space, and self
 - Graham’s conceptual practice bridges art, architecture, and social commentary
 ### Hans Haacke
@@ -94,45 +94,31 @@
 - His work often took the form of text, questioning the role of meaning and context in art
 # Three Short Points for Each Artist
 ## Art & Language
-1
-- Used words and discussions as art
-- 2
-- Challenged who defines art
-- 3
-- Focused on ideas and collaboration
+1. Used words and discussions as art
+2. Challenged who defines art
+3. Focused on ideas and collaboration
 ## Vito Acconci
-1
-- Used his body in performance art
-- 2
-- Explored boundaries and discomfort
-- 3
-- Prioritised action over object
+1. Used his body in performance art
+2. Explored boundaries and discomfort
+3. Prioritised action over object
 ## Marina Abramović
-1
-- Tested physical and mental limits in performances
-- 2
-- Involved the audience directly
-- 3
-- Focused on experience, not objects
+1. Tested physical and mental limits in performances
+2. Involved the audience directly
+3. Focused on experience, not objects
 ## John Baldessari
-1
-- Mixed images with text to question meaning
-- 2
-- Used humour to challenge art traditions
-- 3
-- Delegated art-making to others
+1. Mixed images with text to question the meaning
+2. Used humour to challenge art traditions
+3. Delegated art-making to others
 ## Joseph Kosuth
-1
-- Used language and definitions as art
-- 2
-- Explored what makes something art
-- 3
-- Valued ideas over objects
+1. Used language and definitions as art
+2. Explored what makes something art
+3. Valued ideas over objects
+
 ## In Simple Terms for Students
 ## Conceptual Art
 - Is about the idea behind the artwork, not how it looks or what it’s made from[1][2][3][4][5][7]
 - The artists often used ordinary materials, words, or actions to get their ideas across, sometimes making art that anyone could recreate by following instructions[1][2]
-- Their work makes us question what art is, who decides, and whether the object itself matters-or if the idea is enough
+- Their work makes us question what art is, who decides, and whether the object itself matters, or if the idea is enough
 # Sources
 1
 - [[1] Conceptual art - Wikipedia](https://en.wikipedia.org/wiki/Conceptual_art)
