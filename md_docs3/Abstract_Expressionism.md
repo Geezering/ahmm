@@ -16,8 +16,11 @@
 - Clement Greenberg 
 - Harold Rosenberg 
 - (Both helped define and promote the movement)[7]
-## Writers: Existentialists like Jean-Paul Sartre influenced the focus on individual experience
-## Composers: John Cage (experimental music), Aaron Copland (modern American music)
+## Writers: 
+- Existentialists like Jean-Paul Sartre influenced the focus on individual experience
+## Composers: 
+- John Cage (experimental music)
+- Aaron Copland (modern American music)
 ## Contemporary Inventions and Technology: 
 - Widespread use of acrylic paints (faster drying than oil)
 - New painting tools and techniques, such as commercial paints and house-painting brushes (used by Pollock)[3]
