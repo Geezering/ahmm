@@ -21,6 +21,8 @@ ul {
 }
 li {
   margin: 8px 0;
+  background-color:##e1e9fc;
+  border-radius: 0.1em;
 }
 a {
   color: #0066cc;
