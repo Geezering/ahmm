@@ -1,6 +1,7 @@
 # Abstract Expressionism: Key Facts and Context
 ## Main Locations: 
-- New York City was the main centre, with some activity in California (especially the San Francisco Bay Area)[7][1]
+- New York City was the main centre
+- Also some activity in California (especially the San Francisco Bay Area)[7][1]
 ## Relevant previous art movements: 
 - Surrealism (focus on the unconscious and dreams)[6][7]
 - German Expressionism (emotional intensity)[7]
@@ -95,9 +96,9 @@
 - His later works feature bold, simple shapes and a limited palette, often depicting everyday objects and hooded figures as symbols of anxiety and injustice
 - Guston’s shift from abstraction to figuration has inspired many artists to follow their own creative instincts, regardless of trends
 ### In Simple Terms for Students:
-- Abstract Expressionism was about expressing strong feelings with new, bold ways of painting
-- Artists wanted to show what was inside their minds and hearts, not just what things looked like
-- The movement made New York the centre of the art world and changed how people thought about art forever[1][7]
+- **Abstract Expressionism** was about expressing strong feelings with new, bold ways of painting
+- **Artists wanted to show what was inside their minds and hearts**, not just what things looked like
+- **The movement made New York the centre of the art world** and changed how people thought about art forever[1][7]
 # Sources
 1
 - [Abstract expressionism | Tate](https://www.tate.org.uk/art/art-terms/a/abstract-expressionism)
