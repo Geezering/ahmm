@@ -22,7 +22,10 @@
 - Society was divided between the wealthy elite and the poor, leading to growing social tensions that would later erupt in the French Revolution
 - Rococo art reflected the pleasures and privileges of the upper class, often ignoring the struggles of ordinary people
 # Relevant writers and Composers:
-## Writers: Voltaire, Denis Diderot (philosophers of the Enlightenment, though often critical of Rococo excess)
+## Writers:
+- Voltaire
+- Denis Diderot 
+- (philosophers of the Enlightenment, though often critical of Rococo excess)
 ## Composers:
 - François Couperin, Jean-Philippe Rameau, and later Wolfgang Amadeus Mozart (whose early works fit the elegant, light style of Rococo)
 # Contemporary inventions and technology:
