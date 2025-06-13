@@ -1,4 +1,4 @@
-# Baroque / dDtch Golden Age art: Key themes, ideas, and artistic aspects
+# Baroque / Dutch Golden Age art: Key themes, ideas, and artistic aspects
 # Three short points
 - realism, detail, and everyday life
 - Dutch Golden Age and baroque artists like Rembrandt, Vermeer, Frans Hals, and Pieter de Hooch were renowned for their incredible realism and attention to detail
@@ -7,7 +7,7 @@
 # Diversity of subjects and symbolism
 - **Unlike earlier periods, Dutch artists specialised in a wide variety of subjects:** 
 - Portraits, landscapes, seascapes, still lifes, and genre scenes (scenes of daily life)
-- Still lifes and domestic scenes often included hidden symbolism-like a wilting flower symbolising the shortness of life or a lavish banquet showing wealth and its fleeting nature
+- Still lifes and domestic scenes often included hidden symbolism -for example, a wilting flower symbolising the shortness of life or a lavish banquet showing wealth and its fleeting nature
 - These paintings reflected the values, prosperity, and interests of the growing Dutch middle class
 # Light, drama, and emotional impact
 - Baroque artists across Europe, such as Caravaggio, Rubens, and Artemisia Gentileschi, used dramatic contrasts of light and shadow (called chiaroscuro) and dynamic compositions to create a sense of movement and emotion
@@ -91,89 +91,53 @@ printing press and mapmaking
 2. Dramatic skies and weather
 3. Pride in Dutch nature and countryside
 ## Johannes Vermeer
-1
-- Quiet, sunlit interior scenes
-- 2
-- Mastery of light and colour
-- 3
-- Everyday life with hidden symbolism
+1. Quiet, sunlit interior scenes
+2. Mastery of light and colour
+3. Everyday life with hidden symbolism
 ## Peter Paul Rubens
-1
-. Dramatic, energetic compositions
-- 2
-- Rich colours and dynamic figures
-- 3
-- Combined realism with ideal beauty
+1. Dramatic, energetic compositions
+2. Rich colours and dynamic figures
+3. Combined realism with ideal beauty
 ## Anthony Van Dyck
-1
-- Elegant, graceful portraits of nobility
-- 2
-- Soft, flowing brushwork
-- 3
-- Influenced english portrait painting
+1. Elegant, graceful portraits of nobility
+2. Soft, flowing brushwork
+3. Influenced English portrait painting
 ## Claude Lorrain
-1
-- Idealised, poetic landscapes
-- 2
-- Use of golden light and classical ruins
-- 3
-- Balanced, harmonious compositions
+1. Idealised, poetic landscapes
+2. Use of golden light and classical ruins
+3. Balanced, harmonious compositions
 ## Nicolas Poussin
-1
-- Classical subjects and order
-- 2
-- Clear, structured compositions
-- 3
-- Emphasis on rationality and storytelling
+1. Classical subjects and order
+2. Clear, structured compositions
+3. Emphasis on rationality and storytelling
 ## Caravaggio
-1
-- Dramatic use of light and shadow (tenebrism)
-- 2
-- Realistic, gritty figures
-- 3
-- Powerful, emotional storytelling
+1. Dramatic use of light and shadow (tenebrism)
+2. Realistic, gritty figures
+3. Powerful, emotional storytelling
 ## Orazio Gentileschi
-1
-- Elegant, refined figures
-- 2
-- Use of dramatic light
-- 3
-- Biblical and mythological subjects
+1. Elegant, refined figures
+2. Use of dramatic light
+3. Biblical and mythological subjects
 ## Artemisia Gentileschi
-1
-- Strong women in dramatic scenes
-- 2
-- Bold use of light and shadow
-- 3
-- Realistic emotion and storytelling
+1. Strong women in dramatic scenes
+2. Bold use of light and shadow
+3. Realistic emotion and storytelling
 ## Diego Velázquez
-1
-- Realistic portraits of spanish royalty
-- 2
-- Loose, confident brushwork
-- 3
-- Subtle use of light and perspective
+1. Realistic portraits of spanish royalty
+2. Loose, confident brushwork
+3. Subtle use of light and perspective
 ## Francisco Zurbarán
-1
-- Still lifes and religious scenes
-- 2
-- Strong contrasts of light and dark
-- 3
-- Simple, meditative compositions
+1. Still lifes and religious scenes
+2. Strong contrasts of light and dark
+3. Simple, meditative compositions
 ## Guercino
-1
-- Dramatic, expressive figures
-- 2
-- Rich colour and movement
-- 3
-- Religious and mythological themes
+1. Dramatic, expressive figures
+2. Rich colour and movement
+3. Religious and mythological themes
 ## Salvator Rosa
-1
-- Wild, romantic landscapes
-- 2
-- Dramatic, imaginative scenes
-- 3
-- Emphasis on emotion and fantasy
+1. Wild, romantic landscapes
+2. Dramatic, imaginative scenes
+3. Emphasis on emotion and fantasy
 # Glossary for students
 - ****Genre painting:**** Art showing scenes of everyday life
 - ****Chiaroscuro:**** The use of strong contrasts between light and dark
@@ -182,7 +146,7 @@ printing press and mapmaking
 - ****Realism:**** Making art look true to life, with careful attention to detail
 ## In summary:  
 - Baroque and Dutch Golden Age artists are known for their realism, dramatic use of light, and focus on everyday life, landscapes, and portraits
-- Their work reflects the values, wealth, and changing society of 17th-century europe, using new techniques and a wide range of subjects to engage and impress viewers[1][2][3][8]
+- Their work reflects the values, wealth, and changing society of 17th-century Europe, using new techniques and a wide range of subjects to engage and impress viewers[1][2][3][8]
 # Sources
 [- [dutch golden age painting movement overview | theartstory](https://www.theartstory.org/movement/dutch-golden-age/)
 - **[dutch golden age painting - wikipedia](https:**//en.wikipedia.org/wiki/dutch_golden_age_painting)
