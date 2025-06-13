@@ -43,7 +43,7 @@
 - **Men:** Jeans, T-shirts, and casual, unisex styles
 - **Women:**  Trousers, denim, slogan T-shirts, and expressive, sometimes androgynous or protest-inspired clothing
 - **Both:** Fashion often reflected the counterculture and feminist movements-comfortable, practical, and sometimes deliberately non-traditional
-# ## ## Artists and Period## Period: 
+# Period: 
 - 1955–1990
 ## Key Artists:
 ### Frida Kahlo
