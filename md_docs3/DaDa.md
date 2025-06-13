@@ -45,32 +45,24 @@
 - Believed that art should provoke, confuse, and make people question everything, not just please the eye
 ## In Simple Terms for Students
 - **Dada artists:**
-- Were rebels who wanted to shock society and show that art could be anything-even a joke or a random object
+- Were rebels who wanted to shock society and show that art could be anything, even a joke or a random object
 - They used nonsense, humour, and everyday materials to protest against war and the rules of “serious” art
 - Their work was about breaking boundaries, making people think, and showing that art could be found anywhere
 # Three Short Points for Each Artist 
 ## Marcel Duchamp
-1
-- Used ordinary objects as art (“readymades”)
-- 2
-- Challenged what art means
-- 3
-- Used irony and humour to shock and question
+1. Used ordinary objects as art (“readymades”)
+2. Challenged what art means
+3. Used irony and humour to shock and question
 ## Hannah Höch
-1
-- Invented photomontage with cut-up photos
-- 2
-- Criticised gender roles and politics
-- 3
-- Used chance and playfulness in her art
+1. Invented photomontage with cut-up photos
+2. Criticised gender roles and politics
+3. Used chance and playfulness in her art
 ## Tristan Tzara
-1
-- Wrote manifestos full of nonsense and absurdity
-- 2
-- Organised chaotic performances
-- 3
-- Wanted art to provoke and make people question everything
-- Dada was a radical, international movement that used absurdity, chance, and protest to change the way people saw art and the world[2][3][1]
+1. Wrote manifestos full of nonsense and absurdity
+2. Organised chaotic performances
+3. Wanted art to provoke and make people question everything
+Dada was a radical, international movement that used absurdity, chance, and protest to change the way people saw art and the world[2. ][3. ][1. ]
+
 # Sources
 1
 - [[1] Dada - Tate](https://www.tate.org.uk/art/art-terms/d/dada)
