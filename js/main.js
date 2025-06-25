@@ -1,5 +1,3 @@
-// js/main.js
-
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.md-select').forEach(select => {
     select.addEventListener('change', function () {
@@ -30,31 +28,54 @@ function loadMarkdown(mdFile) {
     });
 }
 
-// Accordion functionality for markdown headings
 function makeAccordion(containerSelector) {
   const container = document.querySelector(containerSelector);
   if (!container) return;
 
-  // Find all h2 headings (adjust to h3/h4 if needed)
-  const headings = container.querySelectorAll('h2');
-  headings.forEach((heading, idx) => {
-    // Find all elements between this heading and the next heading
+  // List the heading levels you want to include in the accordion
+  const headingTags = ['H2', 'H3', 'H4']; // Add H5, H6 if desired
+
+  // Helper: get heading level as a number (e.g., H2 -> 2)
+  function getLevel(tagName) {
+    return parseInt(tagName.replace('H', ''), 10);
+  }
+
+  // Find all headings of interest
+  const allHeadings = Array.from(container.querySelectorAll(headingTags.join(',')));
+
+  allHeadings.forEach((heading, idx) => {
+    // Find all elements between this heading and the next heading of same or higher level
+    const thisLevel = getLevel(heading.tagName);
     let next = heading.nextElementSibling;
     const contentWrapper = document.createElement('div');
     contentWrapper.classList.add('accordion-content');
-    // Move siblings into the content wrapper until the next heading or end
-    while (next && next.tagName !== 'H2') {
+    while (
+      next &&
+      (
+        !headingTags.includes(next.tagName) ||
+        getLevel(next.tagName) > thisLevel
+      )
+    ) {
       const toMove = next;
       next = next.nextElementSibling;
       contentWrapper.appendChild(toMove);
     }
-    // Hide content by default
     contentWrapper.style.display = 'none';
     heading.after(contentWrapper);
 
     // Make heading clickable
     heading.style.cursor = 'pointer';
-    heading.addEventListener('click', function () {
+    heading.addEventListener('click', function (e) {
+      e.stopPropagation();
+      // Toggle only this section
       const isVisible = contentWrapper.style.display === 'block';
-      // Optionally close all others:
-      container.querySelectorAll('.accordion-content').forEach(div => div.style.display = 'none');
+      contentWrapper.style.display = isVisible ? 'none' : 'block';
+
+      // Optionally, close all nested accordions when closing
+      if (isVisible) {
+        contentWrapper.querySelectorAll('.accordion-content').forEach(div => div.style.display = 'none');
+      }
+    });
+  });
+}
+
