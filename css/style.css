@@ -38,6 +38,17 @@ a:hover {
   padding: 20px;
   margin-top: 20px;
 }
+.categories select {
+  min-width: 200px;
+  padding: 0.3em;
+  font-size: 1em;
+}
+.categories label {
+  font-weight: bold;
+  margin-bottom: 0.2em;
+  display: block;
+}
+
 /* Accordion styles for headings */
 .markdown-content h1, .markdown-content h2, .markdown-content h3 {
   cursor: pointer;
