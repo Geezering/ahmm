@@ -76,3 +76,33 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* --- Add this at the end of main.css --- */
+.markdown-content h2, .markdown-content h3, .markdown-content h4 {
+  cursor: pointer;
+  padding: 5px 0;
+  position: relative;
+  transition: background 0.2s;
+}
+.markdown-content h2::before, 
+.markdown-content h3::before, 
+.markdown-content h4::before {
+  content: "▼";
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+.markdown-content h2.active::before, 
+.markdown-content h3.active::before, 
+.markdown-content h4.active::before {
+  content: "▲";
+}
+.accordion-content {
+  padding-left: 1rem;
+  border-left: 2px solid #eee;
+  margin-bottom: 1rem;
+  display: none;
+}
+.accordion-content.active {
+  display: block;
+}
+
