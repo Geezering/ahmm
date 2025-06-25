@@ -8,7 +8,7 @@ function makeAccordion(containerSelector) {
     return parseInt(tagName.replace('H', ''), 10);
   }
 
-  // Remove any existing accordions first (avoids stacking if reloading)
+  // Remove any previous accordion-content divs (if reloading)
   container.querySelectorAll('.accordion-content').forEach(el => el.remove());
   container.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
 
@@ -19,7 +19,6 @@ function makeAccordion(containerSelector) {
     let next = heading.nextElementSibling;
     const contentWrapper = document.createElement('div');
     contentWrapper.classList.add('accordion-content');
-    // Move siblings into the content wrapper until the next heading of same or higher level
     while (
       next &&
       (
