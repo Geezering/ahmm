@@ -36,7 +36,7 @@
 ## Typical fashions of the day for men and women:
 - **Men:** Suits with waistcoats, bowler hats, and walking sticks
 - **Women:**  Bustled skirts, fitted bodices, hats with ribbons and feathers
-## ## Artists and Period
+## Artists and Period
 - **Period:** 1870–1880
 ## Key Artists:
 ### Claude Monet
