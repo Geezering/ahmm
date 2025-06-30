@@ -23,7 +23,9 @@ Germany, the Low Countries (modern-day Belgium and the Netherlands), Switzerland
 - The Protestant Reformation (challenging the Catholic Church and changing religious art)
 - Art commissioned by both private citizens and royalty, not just the church
 # Relevant writers and Composers:
-## Writers: Desiderius Erasmus (humanist scholar), Thomas More
+## Writers: 
+- Desiderius Erasmus (humanist scholar)
+- Thomas More
 ## Composers:
  Josquin des Prez, Heinrich Isaac (polyphonic choral music)
 # Contemporary inventions and technology:
