@@ -23,7 +23,10 @@ France and Belgium (origins), spread across Europe (notably Austria, Germany, Ru
 - **Late 19th-century Europe:** industrialisation, scientific progress, and social change led many artists to turn inward, exploring the mind, dreams, and the mystical as a reaction against materialism and rationalism
 - Influence of new psychological theories (Freud) and interest in the subconscious
 # Relevant writers and Composers:
-## Writers: Charles Baudelaire, Stéphane Mallarmé, Paul Verlaine (poetry full of symbols and moods)
+## Writers: 
+- Charles Baudelaire
+- Stéphane Mallarmé
+- Paul Verlaine (poetry full of symbols and moods)
 ## Composers:
 - Claude Debussy
 - Richard Wagner (music that aimed to evoke atmosphere and emotion)
@@ -35,9 +38,9 @@ France and Belgium (origins), spread across Europe (notably Austria, Germany, Ru
 - **Men:** Tailcoats, waistcoats, cravats, and top hats (late 19th-century formalwear)
 - **Women:**  Corseted dresses, long skirts, elaborate hats, and rich fabrics, often with flowing, decorative details inspired by historical and fantasy themes
 ## Artists and Period
-Late 19th to early 20th century (c
+- Late 19th to early 20th century (c
 - 1860–1920 for Symbolism; Gothic revival influences earlier and ongoing)
-Key Artists:
+## Key Artists:
 ### Henry Fuseli
 - Fuseli’s art is renowned for its exploration of dream worlds, the supernatural, and psychological states, often using dramatic chiaroscuro and theatrical compositions to heighten emotional impact
 - He drew inspiration from literature and myth, creating visionary scenes filled with symbolism, horror, and erotic undertones, as seen in his iconic painting “The Nightmare”
