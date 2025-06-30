@@ -1,11 +1,11 @@
 # Neo classicism
 ## Inspiration from Ancient Greece and Rome
-![The Oath of the Horatii](/ahmm/images/premodern/neoclassical/8horatii.jpg)
+![The Oath of the Horatii](../images/premodern/neoclassical/8horatii.jpg)
 - Neoclassical artists looked back to the art, architecture, and stories of ancient Greece and Rome
 - They used classical themes, such as myths, heroic figures, and historical events, aiming for harmony, simplicity, and ideal beauty
 - Their works often show balanced, symmetrical compositions and calm, ordered scenes, avoiding the drama and decoration of the earlier Baroque and Rococo styles
 ## Emphasis on Line, Clarity, and Moral Virtue
-![text](/ahmm/images/premodern/neoclassical/brutus-4248954760.jpg)
+![text](../images/premodern/neoclassical/brutus-4248954760.jpg)
 - Neoclassical art is known for its clear outlines, smooth surfaces, and restrained use of colour
 - Artists valued drawing (line) more than painting (colour) and focused on precise, controlled technique
 - Many paintings and sculptures have a serious, unemotional (sometimes called “austere”) look and often tell stories about duty, sacrifice, or the importance of moral values
