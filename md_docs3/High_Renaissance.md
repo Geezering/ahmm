@@ -23,7 +23,10 @@
 - Spread of humanist philosophy and interest in science, anatomy, and classical learning
 - Political instability but great cultural flourishing
 # Relevant writers and Composers:
-## Writers: Baldassare Castiglione, Ludovico Ariosto, Niccolò Machiavelli
+## Writers: 
+- Baldassare Castiglione
+- Ludovico Ariosto
+- Niccolò Machiavelli
 ## Composers:
 - Josquin des Prez
 - Giovanni Pierluigi da Palestrina
