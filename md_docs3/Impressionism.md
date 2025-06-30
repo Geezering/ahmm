@@ -23,7 +23,9 @@
 - **Industrial Revolution:** new trains, city planning, and leisure activities
 - Changing roles for women and new ways of seeing the world
 # Relevant writers and Composers:
-## Writers: Stéphane Mallarmé, Émile Zola (wrote about modern life and supported the Impressionists)
+## Writers: 
+- Stéphane Mallarmé
+- Émile Zola (wrote about modern life and supported the Impressionists)
 ## Composers:
 - Claude Debussy
 - Maurice Ravel (created “Impressionist” music inspired by similar ideas of mood and atmosphere)
