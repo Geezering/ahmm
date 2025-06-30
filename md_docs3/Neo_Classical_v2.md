@@ -5,7 +5,7 @@
 - They used classical themes, such as myths, heroic figures, and historical events, aiming for harmony, simplicity, and ideal beauty
 - Their works often show balanced, symmetrical compositions and calm, ordered scenes, avoiding the drama and decoration of the earlier Baroque and Rococo styles
 ## Emphasis on Line, Clarity, and Moral Virtue
-![text](../images/premodern/neoclassical/brutus-4248954760.jpg)
+![Licots bringining the bodies of his two dead sons to Brutus](../images/premodern/neoclassical/brutus-4248954760.jpg)
 - Neoclassical art is known for its clear outlines, smooth surfaces, and restrained use of colour
 - Artists valued drawing (line) more than painting (colour) and focused on precise, controlled technique
 - Many paintings and sculptures have a serious, unemotional (sometimes called “austere”) look and often tell stories about duty, sacrifice, or the importance of moral values
@@ -26,7 +26,10 @@
 - The American and French Revolutions (art used to promote civic virtue and moral ideals)
 - Archaeological discoveries at Herculaneum and Pompeii inspired renewed interest in the ancient world
 # Relevant writers and Composers:
-## Writers: Johann Joachim Winckelmann (art critic and theorist), Voltaire, Jean-Jacques Rousseau
+## Writers: 
+- Johann Joachim Winckelmann (art critic and theorist)
+- Voltaire
+- Jean-Jacques Rousseau
 ## Composers:
 - Wolfgang Amadeus Mozart
 - Joseph Haydn
