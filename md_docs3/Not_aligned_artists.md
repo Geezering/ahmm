@@ -27,10 +27,10 @@
 - Guillaume Apollinaire
 - Gertrude Stein
 ## Composers:
- - Igor Stravinsky
- - Arnold Schoenberg
- - Erik Satie 
- - All experimented with new forms and ideas
+- Igor Stravinsky
+- Arnold Schoenberg
+- Erik Satie 
+- All experimented with new forms and ideas
 # Contemporary inventions and technology:
 - Photography, cinema, radio, early television
 - New materials for sculpture and painting (steel, plastics, synthetic pigments)
