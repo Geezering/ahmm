@@ -56,10 +56,8 @@
 - Immendorff was a German painter and sculptor known for his politically charged, allegorical works that explored themes of division and reunification in Germany
 - His "Café Deutschland" series depicted the tensions of the Cold War era, using vivid imagery and satirical symbolism
 - Immendorff’s art is marked by expressive brushwork, theatrical compositions, and a commitment to social and political engagement
-### A.R
-- Penck
-- A.R
-- Penck (born Ralf Winkler) was a German Neo-Expressionist whose paintings and sculptures feature stick figures, signs, and primitive symbols reminiscent of cave art
+### A.R Penck
+- A.R Penck (born Ralf Winkler) was a German Neo-Expressionist whose paintings and sculptures feature stick figures, signs, and primitive symbols reminiscent of cave art
 - His visual language addressed issues of communication, censorship, and the divided state of Germany during the Cold War
 - Penck’s raw, direct style and use of recurring motifs made his work instantly recognisable and influential in postwar European art
 ### Markus Lüpertz
