@@ -14,7 +14,10 @@
 - This created a unique, hybrid style that combined the best of both traditions and helped spread Renaissance culture throughout Europe
 # Contextual information
 ## Main location(s):
-Germany, the Low Countries (modern-day Belgium and the Netherlands), Switzerland, and England
+- Germany
+- The Low Countries (modern-day Belgium and the Netherlands)
+- Switzerland
+- England
 ## Relevant previous art movements:
 - Gothic art (for decorative detail and manuscript illumination)
 - Early Netherlandish painting (Jan van Eyck, Rogier van der Weyden)
@@ -27,7 +30,8 @@ Germany, the Low Countries (modern-day Belgium and the Netherlands), Switzerland
 - Desiderius Erasmus (humanist scholar)
 - Thomas More
 ## Composers:
- Josquin des Prez, Heinrich Isaac (polyphonic choral music)
+- Josquin des Prez
+- Heinrich Isaac (polyphonic choral music)
 # Contemporary inventions and technology:
 - Perfection of oil painting techniques
 - The printing press (helped spread images and ideas widely)
