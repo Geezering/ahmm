@@ -14,36 +14,36 @@
 - Tracey Emin’s My Bed and Gillian Wearing’s photographs of strangers holding personal signs are examples of art that mixes personal experience with broader cultural critique
 # Contextual information
 ## Main location(s):
-London, especially the East End
+- London, especially the East End
 - Many YBAs studied at Goldsmiths College and exhibited in warehouses and factories across the city
 ## Relevant previous art movements:
-Conceptual Art (focuses on ideas over traditional skills)
-Pop Art (uses imagery from popular culture)
-Minimalism (art stripped down to basics)
+- Conceptual Art (focuses on ideas over traditional skills)
+- Pop Art (uses imagery from popular culture)
+- Minimalism (art stripped down to basics)
 ## Relevant culture and politics:
-1990s Britain: A time of economic change, the rise of “Cool Britannia” (a celebration of modern British culture), and debates about identity and globalisation
+- 1990s Britain: A time of economic change, the rise of “Cool Britannia” (a celebration of modern British culture), and debates about identity and globalisation
 - The art reflected both excitement and anxiety about these changes
 # Relevant writers and Composers:
 ## Writers: 
-Martin Amis
-Irvine Welsh (novelists who captured the gritty, rebellious spirit of the era)
-Composers/Musicians: 
-Britpop bands like Blur and Oasis, who were also part of the “Cool Britannia” movement
+- Martin Amis
+- Irvine Welsh (novelists who captured the gritty, rebellious spirit of the era)
+## Composers/Musicians: 
+- Britpop bands like Blur and Oasis, who were also part of the “Cool Britannia” movement
 - Art critics: 
-Sarah Kent
-Matthew Collings
+- Sarah Kent
+- Matthew Collings
 # Contemporary inventions and technology:
-Widespread use of the internet began in the 1990s
-Mobile phones became common
-Mass media and advertising had a growing influence on culture
+- Widespread use of the internet began in the 1990s
+- Mobile phones became common
+- Mass media and advertising had a growing influence on culture
 ## Typical fashions of the day for men and women:
 - **Men:** Baggy jeans, graphic T-shirts, trainers, and sportswear
 - **Women:**  Slip dresses, platform shoes, crop tops, and “heroin chic” style (minimal make-up, skinny looks)
-**$1:** Vintage and second-hand clothing, reflecting a rebellious, anti-establishment attitude
-Artists and Period
-**$1:**
-1988–1999 (core years, though influence continues)
-Key Artists:
+**Both:** Vintage and second-hand clothing, reflecting a rebellious, anti-establishment attitude
+# Artists and Period
+## Period:
+- 1988–1999 (core years, though influence continues)
+## Key Artists:
 ### Damien Hirst
 - Hirst is a British artist renowned for his provocative and controversial works that explore themes of life, death, beauty, and mortality, often using preserved animals in formaldehyde and other unconventional materials[1][2][5][6][7]
 - He was a central figure in the Young British Artists (YBAs) movement of the 1990s, gaining notoriety for challenging traditional notions of art and curating the influential "Freeze" exhibition[1][6][7][8]
@@ -105,11 +105,11 @@ Key Artists:
 - The group critiqued the commercialisation and elitism of the contemporary art scene through collaborative, often irreverent projects
 - BANK’s activities challenged institutional authority and questioned the mechanisms of power and value in the art market
 # Three Short Points for Students
-YBAs used shock and everyday materials to challenge what art could be, often making people question their own beliefs and society’s values
+- YBAs used shock and everyday materials to challenge what art could be, often making people question their own beliefs and society’s values
 - Their art was deeply personal and often controversial, exploring themes like identity, death, and consumer culture in a rapidly changing Britain
 - The movement was shaped by 1990s London, “Cool Britannia”, and a new media-savvy, entrepreneurial approach that blurred the lines between art, celebrity, and business
 # Glossary for Students:
-- Conceptual art:  Art where the main focus is the idea, not the traditional skills or materials
+- **Conceptual art**:  Art where the main focus is the idea, not the traditional skills or materials
 - **Conceptual art**:  Art where the main focus is the idea, not the traditional skills or materials
 - **Consumerism**:  A society focused on buying and owning things
 - **Taboo**:  A subject that is usually avoided because it is considered shocking or unacceptable
