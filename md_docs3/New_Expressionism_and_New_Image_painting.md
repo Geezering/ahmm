@@ -1,22 +1,22 @@
-New Expressionism and New Image Painting
+# New Expressionism and New Image Painting
 ## Key Themes, Ideas, and Artistic Aspects
-Raw Emotion, Bold Colour, and Vigorous Brushwork
-New Expressionism (also called Neo-Expressionism) is known for its intense emotional energy, using bold, sometimes jarring colours and thick, expressive brushstrokes
+### Raw Emotion, Bold Colour, and Vigorous Brushwork
+- New Expressionism (also called Neo-Expressionism) is known for its intense emotional energy, using bold, sometimes jarring colours and thick, expressive brushstrokes
 - Artists like Georg Baselitz, Anselm Kiefer, and Julian Schnabel painted in a way that felt spontaneous and powerful, often on a large scale
 - Their works show strong feelings and personal visions, sometimes appearing rough or even violent in their execution
-- Return to the Figure and Storytelling
-Unlike the abstract or minimalist art that came before, these artists brought back recognisable images, especially the human figure, but often in a distorted, exaggerated, or cartoon-like way
+### Return to the Figure and Storytelling
+- Unlike the abstract or minimalist art that came before, these artists brought back recognisable images, especially the human figure, but often in a distorted, exaggerated, or cartoon-like way
 - Many works tell stories or refer to history, myth, politics, or personal experience
-- For example, Anselm Kiefer’s paintings often deal with German history, while Jean-Michel Basquiat used graffiti-like figures to explore identity and society
-- Mixing Materials and Breaking Boundaries
-New Image Painting and Neo-Expressionism often combined different materials and techniques, such as sand, fabric, found objects, or collage, alongside paint
+- For example, Anselm Kiefer’s paintings often deal with German history, while Jean-Michel - Basquiat used graffiti-like figures to explore identity and society
+### Mixing Materials and Breaking Boundaries
+- New Image Painting and Neo-Expressionism often combined different materials and techniques, such as sand, fabric, found objects, or collage, alongside paint
 - This mixed-media approach made the artworks more textured and physical
 - The movement also blurred the line between painting and sculpture, and between “high” art and popular culture, drawing on influences from punk, pop art, and street art
 # Contextual information
 ## Main location(s):
-Germany (Berlin, Düsseldorf)
-United States (New York)
-Also active in Italy, France, and the UK
+- Germany (Berlin, Düsseldorf)
+- United States (New York)
+- Also active in Italy, France, and the UK
 ## Relevant previous art movements:
 - German Expressionism (early 20th century, focus on emotion and distortion)
 - Abstract Expressionism (emotional, gestural painting)
@@ -28,7 +28,7 @@ Also active in Italy, France, and the UK
 - The art market boom of the 1980s, with artists becoming celebrities and their work highly commercialised
 # Relevant writers and Composers:
 ## Writers: 
-Jean-Paul Sartre (existentialism)
+- Jean-Paul Sartre (existentialism)
 - German poets like Paul Celan (inspired Kiefer)
 - Critics like Donald Kuspit
 ## Composers:
