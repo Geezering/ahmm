@@ -6,6 +6,8 @@
 ## Final attempt at image
 ![The Oath of the Horatii](/ahmm/images/premodern/neoclassical/8horatii.jpg)
 ![The Oath of the Horatii](images/premodern/neoclassical/8horatii.jpg)
+## With Fix for both
+![The Oath of the Horatii](images/premodern/neoclassical/8horatii.jpg)
 - Neoclassical artists looked back to the art, architecture, and stories of ancient Greece and Rome
 - They used classical themes, such as myths, heroic figures, and historical events, aiming for harmony, simplicity, and ideal beauty
 - Their works often show balanced, symmetrical compositions and calm, ordered scenes, avoiding the drama and decoration of the earlier Baroque and Rococo styles
