@@ -26,7 +26,7 @@ function loadMarkdown(mdFile) {
     })
     .then(text => {
       document.getElementById('content').innerHTML = marked.parse(text);
-      fixImagePaths('#content', 'myrepo'); // <-- ADD THIS LINE
+      fixImagePaths('#content', 'ahmm'); // <-- Set your repo name here!
       makeAccordion('#content');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     })
@@ -36,22 +36,40 @@ function loadMarkdown(mdFile) {
     });
 }
 
-// Add this function to fix image paths for GitHub Pages
-function fixImagePaths(containerSelector, repoName = 'myrepo') {
+// Improved image path fixer with logging for debugging
+function fixImagePaths(containerSelector, repoName = 'ahmm') {
   document.querySelectorAll(`${containerSelector} img`).forEach(img => {
+    let src = img.getAttribute('src');
+    if (!src) return;
+
+    // Log the original src for debugging
+    console.log('Original img src:', src);
+
     // Only fix if hosted on GitHub Pages
     if (window.location.hostname.endsWith('github.io')) {
       // If src starts with /images/, prepend repo name
-      if (img.getAttribute('src') && img.getAttribute('src').startsWith('/images/')) {
-        img.setAttribute('src', `/${repoName}${img.getAttribute('src')}`);
+      if (src.startsWith('/images/')) {
+        img.setAttribute('src', `/${repoName}${src}`);
+        console.log(`Rewrote ${src} to /${repoName}${src}`);
       }
       // If src starts with images/, prepend /repoName/
-      else if (img.getAttribute('src') && img.getAttribute('src').startsWith('images/')) {
-        img.setAttribute('src', `/${repoName}/${img.getAttribute('src')}`);
+      else if (src.startsWith('images/')) {
+        img.setAttribute('src', `/${repoName}/${src}`);
+        console.log(`Rewrote ${src} to /${repoName}/${src}`);
       }
       // If src starts with ../images/, replace ../ with /repoName/
-      else if (img.getAttribute('src') && img.getAttribute('src').startsWith('../images/')) {
-        img.setAttribute('src', `/${repoName}/images/${img.getAttribute('src').substring('../images/'.length)}`);
+      else if (src.startsWith('../images/')) {
+        img.setAttribute('src', `/${repoName}/images/${src.substring('../images/'.length)}`);
+        console.log(`Rewrote ${src} to /${repoName}/images/${src.substring('../images/'.length)}`);
+      }
+      // If src starts with /repoName/images, leave as is
+      else if (src.startsWith(`/${repoName}/images/`)) {
+        // Do nothing, already correct
+        console.log(`Already correct: ${src}`);
+      }
+      else {
+        // Log unhandled cases
+        console.log('Unhandled img src:', src);
       }
     }
   });
