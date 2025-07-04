@@ -71,4 +71,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
+.markdown-content h1 { color: #181818; }
+.markdown-content h2 { color: #383838; }
+.markdown-content h3 { color: #686868; }
