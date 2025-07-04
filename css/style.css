@@ -12,9 +12,6 @@ body {
 h1, h2 {
   color: #444;
 }
-h1, h2, h3 {
-  font-size: 70%;
-}
 .categories {
   margin-bottom: 30px;
 }
@@ -74,3 +71,4 @@ img {
   max-width: 100%;
   height: auto;
 }
+
