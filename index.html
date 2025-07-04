@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Art Movements Mind Map</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
-    /* Optional: Only keep dropdown and layout styles here. 
-       Do NOT duplicate accordion styles here—keep those in css/style.css */
     .container {
       max-width: 900px;
       margin: 1.5rem auto;
@@ -16,7 +13,7 @@
       font-family: Arial, sans-serif;
     }
     h1 {
-      text-align: left;
+      text-align: center;
       margin-bottom: 1rem;
     }
     .categories {
@@ -54,22 +51,6 @@
       padding-top: 1rem;
       line-height: 1.6;
     }
-    
-/* Applies to all headings */
-h1, h2, h3, h4, h5, h6 {
-  display: block;
-  width: 100%;
-  background: #e0f0ff;        /* Choose your background color */
-  color: #222;                /* Text color */
-  text-align: left;           /* Left align */
-  padding: 0.5em 1em;         /* Top/bottom and left/right padding for indentation */
-  margin: 1em 0;              /* Space above/below headings */
-  border-radius: 0.5em;       /* Slightly rounded corners */
-  box-sizing: border-box;     /* Ensures padding doesn't exceed container width */
-  /* Optional: Add a subtle shadow for effect */
-  /* box-shadow: 0 1px 4px rgba(0,0,0,0.04); */
-}
-
   </style>
 </head>
 <body>
@@ -80,67 +61,67 @@ h1, h2, h3, h4, h5, h6 {
         <label for="pre-modern">Pre Modern</label>
         <select id="pre-modern" class="md-select" aria-label="Pre Modern Art Movements">
           <option value="">Select...</option>
-          <option value="md_docs3/Early_Renaissance.md">Early Renaissance</option>
-          <option value="md_docs3/Mid_Renaissance.md">Mid Renaissance</option>
-          <option value="md_docs3/Mid_Northern_Renaissance.md">Mid Northern Renaissance</option>
-          <option value="md_docs3/High_Northern_Renaissance.md">High Northern Renaissance</option>
-          <option value="md_docs3/High_Renaissance.md">High Renaissance</option>
-          <option value="md_docs3/Mannerism.md">Mannerism</option>
-          <option value="md_docs3/Baroque_Golden_Age_Dutch.md">Baroque Golden Age Dutch</option>
-          <option value="md_docs3/Rococo_period.md">Rococo period</option>
-          <option value="md_docs3/Neo_Classical_v2.md">Neo Classical</option>
-          <option value="md_docs3/Pre-Raphaelites.md">Pre-Raphaelites</option>
-          <option value="md_docs3/Romantic.md">Romantic</option>
-          <option value="md_docs3/Realism.md">Realism</option>
-          <option value="md_docs3/Gothic_and_symbolist.md">Gothic and symbolist</option>
-          <option value="md_docs3/Barbizon_School.md">Barbizon School</option>
+          <option value="md-html_docs/Early_Renaissance.html">Early Renaissance</option>
+          <option value="md-html_docs/Mid_Renaissance.html">Mid Renaissance</option>
+          <option value="md-html_docs/Mid_Northern_Renaissance.html">Mid Northern Renaissance</option>
+          <option value="md-html_docs/High_Northern_Renaissance.html">High Northern Renaissance</option>
+          <option value="md-html_docs/High_Renaissance.html">High Renaissance</option>
+          <option value="md-html_docs/Mannerism.html">Mannerism</option>
+          <option value="md-html_docs/Baroque_Golden_Age_Dutch.html">Baroque Golden Age Dutch</option>
+          <option value="md-html_docs/Rococo_period.html">Rococo period</option>
+          <option value="md-html_docs/Neo_Classical.html">Neo Classical</option>
+          <option value="md-html_docs/Pre-Raphaelites.html">Pre-Raphaelites</option>
+          <option value="md-html_docs/Romantic.html">Romantic</option>
+          <option value="md-html_docs/Realism.html">Realism</option>
+          <option value="md-html_docs/Gothic_and_symbolist.html">Gothic and symbolist</option>
+          <option value="md-html_docs/Barbizon_School.html">Barbizon School</option>
         </select>
       </div>
       <div class="category-select">
         <label for="modern">Modern</label>
         <select id="modern" class="md-select" aria-label="Modern Art Movements">
           <option value="">Select...</option>
-          <option value="md_docs3/Impressionism.md">Impressionism</option>
-          <option value="md_docs3/Post_Impressionism.md">Post Impressionism</option>
-          <option value="md_docs3/Pointilism.md">Pointilism</option>
-          <option value="md_docs3/Fauvism.md">Fauvism</option>
-          <option value="md_docs3/Analytic_Cubism.md">Analytic Cubism</option>
-          <option value="md_docs3/Futurism.md">Futurism</option>
-          <option value="md_docs3/Expressionism.md">Expressionism</option>
-          <option value="md_docs3/DaDa.md">DaDa</option>
-          <option value="md_docs3/De_Stijl.md">De Stijl</option>
-          <option value="md_docs3/Synthetic_Cubism.md">Synthetic Cubism</option>
-          <option value="md_docs3/Suprematism.md">Suprematism</option>
-          <option value="md_docs3/Constructivism.md">Constructivism</option>
-          <option value="md_docs3/New_objectivity.md">New objectivity</option>
-          <option value="md_docs3/Surrealism.md">Surrealism</option>
-          <option value="md_docs3/School_of_Paris.md">School of Paris</option>
-          <option value="md_docs3/Not_aligned_artists.md">Not aligned artists</option>
-          <option value="md_docs3/Post_War_Paris.md">Post War Paris</option>
-          <option value="md_docs3/Abstract_Expressionism.md">Abstract Expressionism</option>
-          <option value="md_docs3/Neo_DaDa.md">Neo DaDa</option>
-          <option value="md_docs3/Late_Modernism.md">Late Modernism</option>
-          <option value="md_docs3/Minimalism.md">Minimalism</option>
-          <option value="md_docs3/Pop_Art.md">Pop Art</option>
-          <option value="md_docs3/Op_Art.md">Op Art</option>
-          <option value="md_docs3/Arte_Povera.md">Arte Povera</option>
-          <option value="md_docs3/Land_Art.md">Land Art</option>
-          <option value="md_docs3/Performance_Art.md">Performance Art</option>
-          <option value="md_docs3/Conceptual_Art.md">Conceptual Art</option>
+          <option value="md-html_docs/Impressionism.html">Impressionism</option>
+          <option value="md-html_docs/Post_Impressionism.html">Post Impressionism</option>
+          <option value="md-html_docs/Pointilism.html">Pointilism</option>
+          <option value="md-html_docs/Fauvism.html">Fauvism</option>
+          <option value="md-html_docs/Analytic_Cubism.html">Analytic Cubism</option>
+          <option value="md-html_docs/Futurism.html">Futurism</option>
+          <option value="md-html_docs/Expressionism.html">Expressionism</option>
+          <option value="md-html_docs/DaDa.html">DaDa</option>
+          <option value="md-html_docs/De_Stijl.html">De Stijl</option>
+          <option value="md-html_docs/Synthetic_Cubism.html">Synthetic Cubism</option>
+          <option value="md-html_docs/Suprematism.html">Suprematism</option>
+          <option value="md-html_docs/Constructivism.html">Constructivism</option>
+          <option value="md-html_docs/New_objectivity.html">New objectivity</option>
+          <option value="md-html_docs/Surrealism.html">Surrealism</option>
+          <option value="md-html_docs/School_of_Paris.html">School of Paris</option>
+          <option value="md-html_docs/Not_aligned_artists.html">Not aligned artists</option>
+          <option value="md-html_docs/Post_War_Paris.html">Post War Paris</option>
+          <option value="md-html_docs/Abstract_Expressionism.html">Abstract Expressionism</option>
+          <option value="md-html_docs/Neo_DaDa.html">Neo DaDa</option>
+          <option value="md-html_docs/Late_Modernism.html">Late Modernism</option>
+          <option value="md-html_docs/Minimalism.html">Minimalism</option>
+          <option value="md-html_docs/Pop_Art.html">Pop Art</option>
+          <option value="md-html_docs/Op_Art.html">Op Art</option>
+          <option value="md-html_docs/Arte_Povera.html">Arte Povera</option>
+          <option value="md-html_docs/Land_Art.html">Land Art</option>
+          <option value="md-html_docs/Performance_Art.html">Performance Art</option>
+          <option value="md-html_docs/Conceptual_Art.html">Conceptual Art</option>
         </select>
       </div>
       <div class="category-select">
         <label for="post-modern">Post Modern</label>
         <select id="post-modern" class="md-select" aria-label="Post Modern Art Movements">
           <option value="">Select...</option>
-          <option value="md_docs3/Feminist_Art.md">Feminist Art</option>
-          <option value="md_docs3/Post_Modernism.md">Post Modernism</option>
-          <option value="md_docs3/Transavantgardia.md">Transavantgardia</option>
-          <option value="md_docs3/Wilde_Bilder.md">Wilde Bilder</option>
-          <option value="md_docs3/New_Expressionism_and_New_Image_pPost Modern: New Expressionism New Image painting.md">New Expressionism & New Image painting</option>
-          <option value="md_docs3/Neo_Geo.md">Neo Geo</option>
-          <option value="md_docs3/YBA.md">YBA</option>
-          <option value="md_docs3/BANK.md">BANK</option>
+          <option value="md-html_docs/Feminist_Art.html">Feminist Art</option>
+          <option value="md-html_docs/Post_Modernism.html">Post Modernism</option>
+          <option value="md-html_docs/Transavantgardia.html">Transavantgardia</option>
+          <option value="md-html_docs/Wilde_Bilder.html">Wilde Bilder</option>
+          <option value="md-html_docs/New_Expressionism_and_New_Image_pPost_Modern_New_Expressionism_New_Image_painting.html">New Expressionism & New Image painting</option>
+          <option value="md-html_docs/Neo_Geo.html">Neo Geo</option>
+          <option value="md-html_docs/YBA.html">YBA</option>
+          <option value="md-html_docs/BANK.html">BANK</option>
         </select>
       </div>
     </div>
