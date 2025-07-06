@@ -110,3 +110,7 @@ figcaption .year {
   font-weight: normal;
   font-style: normal;
 }
+.two-column-list {
+  column-count: 2;
+  column-gap: 2em; /* optional: adjust spacing */
+}
