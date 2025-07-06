@@ -1,151 +1,372 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Art Movements Mind Map</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <style>
-    .container {
-      max-width: 900px;
-      margin: 1.5rem 	;
-      padding: 0 1rem;
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    .categories {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .category-select {
-      display: flex;
-      flex-direction: column;
-      min-width: 220px;
-    }
-    .category-select label {
-      font-weight: bold;
-      margin-bottom: 0.3rem;
-      font-size: 1.1rem;
-    }
-    .category-select select {
-      padding: 0.4em 0.6em;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: border-color 0.3s ease;
-    }
-    .category-select select:hover,
-    .category-select select:focus {
-      border-color: #0077cc;
-      outline: none;
-    }
-    #content {
-      border-top: 1px solid #ddd;
-      padding-top: 1rem;
-      line-height: 1.6;
-    }
-    img {
-  max-width: 100%;
-  height: auto;
-}
-
-.caption .artist {
-  font-weight: bold;
-}
-
-.caption .title {
-  font-style: italic;
-}
-
-.caption .year {
-  font-weight: normal;
-  font-style: normal;
-}
+<h1 id="neo-classicism">Neo classicism</h1>
+<h2 id="inspiration-from-ancient-greece-and-rome">Inspiration from
+Ancient Greece and Rome</h2>
 
 
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Art Movements</h1>
-    <div class="categories">
-      <div class="category-select">
-        <label for="pre-modern">Pre Modern</label>
-        <select id="pre-modern" class="md-select" aria-label="Pre Modern Art Movements">
-          <option value="">Select...</option>
-          <option value="md-html_docs/Early_Renaissance.html">Early Renaissance</option>
-          <option value="md-html_docs/Mid_Renaissance.html">Mid Renaissance</option>
-          <option value="md-html_docs/Mid_Northern_Renaissance.html">Mid Northern Renaissance</option>
-          <option value="md-html_docs/High_Northern_Renaissance.html">High Northern Renaissance</option>
-          <option value="md-html_docs/High_Renaissance.html">High Renaissance</option>
-          <option value="md-html_docs/Mannerism.html">Mannerism</option>
-          <option value="md-html_docs/Baroque_Golden_Age_Dutch.html">Baroque Golden Age Dutch</option>
-          <option value="md-html_docs/Rococo_period.html">Rococo period</option>
-          <option value="md-html_docs/Neo_Classical.html">Neo Classical</option>
-          <option value="md-html_docs/Pre-Raphaelites.html">Pre-Raphaelites</option>
-          <option value="md-html_docs/Romantic.html">Romantic</option>
-          <option value="md-html_docs/Realism.html">Realism</option>
-          <option value="md-html_docs/Gothic_and_symbolist.html">Gothic and symbolist</option>
-          <option value="md-html_docs/Barbizon_School.html">Barbizon School</option>
-        </select>
-      </div>
-      <div class="category-select">
-        <label for="modern">Modern</label>
-        <select id="modern" class="md-select" aria-label="Modern Art Movements">
-          <option value="">Select...</option>
-          <option value="md-html_docs/Impressionism.html">Impressionism</option>
-          <option value="md-html_docs/Post_Impressionism.html">Post Impressionism</option>
-          <option value="md-html_docs/Pointilism.html">Pointilism</option>
-          <option value="md-html_docs/Fauvism.html">Fauvism</option>
-          <option value="md-html_docs/Analytic_Cubism.html">Analytic Cubism</option>
-          <option value="md-html_docs/Futurism.html">Futurism</option>
-          <option value="md-html_docs/Expressionism.html">Expressionism</option>
-          <option value="md-html_docs/DaDa.html">DaDa</option>
-          <option value="md-html_docs/De_Stijl.html">De Stijl</option>
-          <option value="md-html_docs/Synthetic_Cubism.html">Synthetic Cubism</option>
-          <option value="md-html_docs/Suprematism.html">Suprematism</option>
-          <option value="md-html_docs/Constructivism.html">Constructivism</option>
-          <option value="md-html_docs/New_objectivity.html">New objectivity</option>
-          <option value="md-html_docs/Surrealism.html">Surrealism</option>
-          <option value="md-html_docs/School_of_Paris.html">School of Paris</option>
-          <option value="md-html_docs/Not_aligned_artists.html">Not aligned artists</option>
-          <option value="md-html_docs/Post_War_Paris.html">Post War Paris</option>
-          <option value="md-html_docs/Abstract_Expressionism.html">Abstract Expressionism</option>
-          <option value="md-html_docs/Neo_DaDa.html">Neo DaDa</option>
-          <option value="md-html_docs/Late_Modernism.html">Late Modernism</option>
-          <option value="md-html_docs/Minimalism.html">Minimalism</option>
-          <option value="md-html_docs/Pop_Art.html">Pop Art</option>
-          <option value="md-html_docs/Op_Art.html">Op Art</option>
-          <option value="md-html_docs/Arte_Povera.html">Arte Povera</option>
-          <option value="md-html_docs/Land_Art.html">Land Art</option>
-          <option value="md-html_docs/Performance_Art.html">Performance Art</option>
-          <option value="md-html_docs/Conceptual_Art.html">Conceptual Art</option>
-        </select>
-      </div>
-      <div class="category-select">
-        <label for="post-modern">Post Modern</label>
-        <select id="post-modern" class="md-select" aria-label="Post Modern Art Movements">
-          <option value="">Select...</option>
-          <option value="md-html_docs/Feminist_Art.html">Feminist Art</option>
-          <option value="md-html_docs/Post_Modernism.html">Post Modernism</option>
-          <option value="md-html_docs/Transavantgardia.html">Transavantgardia</option>
-          <option value="md-html_docs/Wilde_Bilder.html">Wilde Bilder</option>
-          <option value="md-html_docs/New_Expressionism_and_New_Image_pPost_Modern_New_Expressionism_New_Image_painting.html">New Expressionism & New Image painting</option>
-          <option value="md-html_docs/Neo_Geo.html">Neo Geo</option>
-          <option value="md-html_docs/YBA.html">YBA</option>
-          <option value="md-html_docs/BANK.html">BANK</option>
-        </select>
-      </div>
-    </div>
-    <div id="content" class="markdown-content" aria-live="polite" aria-atomic="true"></div>
-  </div>
-  <script src="js/main.js"></script>
-</body>
-</html>
+
+<img src="images/premodern/neoclassical/8horatii.jpg" alt="The Oath of the Horatii" style="max-width:100%; height:auto;">
+
+<span class="caption">
+  <span class="artist">JL David</span>, 
+  <span class="title">The Oath of the Horatii</span> 
+  <span class="year">1762-4</span>
+</span>
+
+<ul>
+<li>Neoclassical artists looked back to the art, architecture, and
+stories of ancient Greece and Rome</li>
+<li>They used classical themes, such as myths, heroic figures, and
+historical events, aiming for harmony, simplicity, and ideal beauty</li>
+<li>Their works often show balanced, symmetrical compositions and calm,
+ordered scenes, avoiding the drama and decoration of the earlier Baroque
+and Rococo styles</li>
+</ul>
+<h2 id="emphasis-on-line-clarity-and-moral-virtue">Emphasis on Line,
+Clarity, and Moral Virtue</h2>
+<ul>
+<li>Neoclassical art is known for its clear outlines, smooth surfaces,
+and restrained use of colour</li>
+<li>Artists valued drawing (line) more than painting (colour) and
+focused on precise, controlled technique</li>
+<li>Many paintings and sculptures have a serious, unemotional (sometimes
+called “austere”) look and often tell stories about duty, sacrifice, or
+the importance of moral values</li>
+</ul>
+<h2 id="historical-accuracy-and-contemporary-relevance">Historical
+Accuracy and Contemporary Relevance</h2>
+<ul>
+<li>Artists aimed to show costumes, settings, and details as accurately
+as possible, based on archaeological discoveries and studies of
+classical art</li>
+<li>At the same time, they used ancient stories to comment on their own
+times, especially during political events like the French
+Revolution</li>
+<li>For example, Jacques-Louis David’s paintings celebrated republican
+values and heroism, linking ancient Rome to the struggles for liberty in
+France</li>
+</ul>
+<h1 id="contextual-information">Contextual information</h1>
+<h2 id="main-locations">Main location(s):</h2>
+<ul>
+<li>Paris, France (especially for painting and sculpture)</li>
+<li>Rome and other parts of Italy (inspiration and study)</li>
+<li>London and other European capitals</li>
+</ul>
+<h2 id="relevant-previous-art-movements">Relevant previous art
+movements:</h2>
+<ul>
+<li>Rococo (Neoclassicism was a reaction against its lightness and
+decoration)</li>
+<li>Baroque (rejected its drama and excess)</li>
+</ul>
+<h2 id="relevant-culture-and-politics">Relevant culture and
+politics:</h2>
+<ul>
+<li>The Enlightenment (focus on reason, science, and progress)</li>
+<li>The American and French Revolutions (art used to promote civic
+virtue and moral ideals)</li>
+<li>Archaeological discoveries at Herculaneum and Pompeii inspired
+renewed interest in the ancient world</li>
+</ul>
+<h1 id="relevant-writers-and-composers">Relevant writers and
+Composers:</h1>
+<h2 id="writers">Writers:</h2>
+<ul>
+<li>Johann Joachim Winckelmann (art critic and theorist)</li>
+<li>Voltaire</li>
+<li>Jean-Jacques Rousseau</li>
+</ul>
+<h2 id="composers">Composers:</h2>
+<ul>
+<li>Wolfgang Amadeus Mozart</li>
+<li>Joseph Haydn</li>
+<li>Ludwig van Beethoven (early works)</li>
+</ul>
+<h1 id="contemporary-inventions-and-technology">Contemporary inventions
+and technology:</h1>
+<ul>
+<li>Archaeological excavation tools</li>
+<li>Advances in printing and engraving (helped spread classical images
+and ideas)</li>
+<li>Improved travel (Grand Tour for young aristocrats)</li>
+</ul>
+<h2 id="typical-fashions-of-the-day-for-men-and-women">Typical fashions
+of the day for men and women:</h2>
+<ul>
+<li><strong>Men:</strong> Tailcoats, breeches, waistcoats, cravats, and
+powdered wigs</li>
+<li><strong>Women:</strong> High-waisted “empire” dresses, light
+fabrics, simple lines, and classical-inspired hairstyles</li>
+</ul>
+<h2 id="artists-and-period">Artists and Period</h2>
+<ul>
+<li><strong>Period:</strong> 1770–1850 (main years for Neoclassicism in
+art and sculpture)</li>
+</ul>
+<h2 id="key-artists">Key Artists:</h2>
+<h3 id="jacques-louis-david">Jacques-Louis David</h3>
+
+<img src="images/premodern/neoclassical/brutus-4248954760.jpg" alt="Lictors bringing the bodies of his two dead sons to Brutus">
+
+<span class="caption">
+  <span class="artist">JL David</span>, 
+  <span class="title">The Lictors Bring to Brutus the Bodies of His Sons</span> 
+  <span class="year">1789</span>
+</span>
+
+<ul>
+<li>David was the leading figure of Neoclassical painting, renowned for
+his austere, morally charged history scenes that rejected Rococo
+frivolity in favour of classical severity and heightened emotion</li>
+<li>His works, such as “Oath of the Horatii” and “The Death of Marat,”
+became symbols of revolutionary virtue and political propaganda,
+reflecting his active involvement in the French Revolution and later as
+Napoleon’s official painter</li>
+<li>David’s influence shaped French and European art for generations,
+both through his monumental canvases and his role as a teacher to many
+prominent artists, including Jean-Auguste-Dominique Ingres</li>
+</ul>
+<h3 id="jean-françois-peyron">Jean-François Peyron</h3>
+
+
+<img src="images/premodern/neoclassical/Jean_Francois_Pierre_Peyron_-_The_Death_of_Socrates_-_Google_Art_Project.jpg" style="max-width:100%; height:auto;" alt="<span class="caption">
+  <span class="artist">Jean Francois Pierre Peyron</span>, 
+  <span class="title">The Death of Socrates</span> 
+  <span class="year">1786/7</span>
+</span>
+
+
+
+<ul>
+<li>Peyron was a French Neoclassical painter known for his clear
+compositions, restrained colour palette, and focus on historical and
+mythological subjects</li>
+<li>He competed with David and contributed to the revival of classical
+themes and moral seriousness in late 18th-century French art</li>
+<li>Peyron’s works emphasised rationality, virtue, and the didactic
+purpose of art, aligning with the ideals of the Enlightenment</li>
+</ul>
+<h3 id="gavin-hamilton">Gavin Hamilton</h3>
+
+<img src="images/premodern/neoclassical/hamiltonlucretia.jpg" alt="The Death of Lucretia 1763-67">
+
+<span class="caption">
+  <span class="artist">Gavin Hamilton</span>, 
+  <span class="title">The Death of Lucretia</span> 
+  <span class="year">1763-67</span>
+</span>
+
+<ul>
+<li>Hamilton was a Scottish painter, archaeologist, and art dealer,
+instrumental in promoting Neoclassicism through both his paintings and
+his excavations in Rome</li>
+<li>His large-scale history paintings drew on classical antiquity for
+subject matter and compositional clarity, influencing artists across
+Europe</li>
+<li>Hamilton’s work and scholarship helped shape the taste for classical
+art in Britain and abroad during the late 18th century</li>
+</ul>
+<h3 id="antoine-jean-gros">Antoine-Jean Gros</h3>
+
+<img src="images/premodern/neoclassical/Napoleon-Battlefield-at-Eylau-oil-painting-Antoine-Jean-1808.jpg" alt="Napoleon at Eylau 1808">
+
+<span class="caption">
+  <span class="artist">Baron Gros</span>, 
+  <span class="title">Napoleon at Eylau</span> 
+  <span class="year">1808</span>
+</span>
+
+<ul>
+<li>Gros was a pupil of David who blended Neoclassical technique with
+the drama and colour of Romanticism, particularly in his dynamic battle
+scenes and portraits of Napoleon</li>
+<li>His works, such as “Napoleon Visiting the Plague Victims of Jaffa,”
+are noted for their emotional intensity and vivid realism</li>
+<li>Gros’s approach paved the way for the Romantic movement in French
+painting</li>
+</ul>
+<h3 id="antonio-canova">Antonio Canova</h3>
+
+<img src="images/premodern/neoclassical/Canova.jpg" alt="Perseus with the Head of Medusa">
+
+<span class="caption">
+  <span class="artist">Antonio Canova</span>, 
+  <span class="title">Perseus with the Head of Medusa</span> 
+  <span class="year">1804-6</span>
+</span>
+<ul>
+<li>Canova was the preeminent Neoclassical sculptor, celebrated for his
+marble statues that revived the grace, harmony, and ideal beauty of
+classical antiquity</li>
+<li>His works, including “Psyche Revived by Cupid’s Kiss” and numerous
+portraits, are characterised by refined surfaces and serene
+compositions</li>
+<li>Canova’s influence extended throughout Europe, setting the standard
+for Neoclassical sculpture</li>
+</ul>
+<h3 id="john-flaxman">John Flaxman</h3>
+<img src="images/premodern/neoclassical/Flaxman.jpg" alt="Relief Sculpture">
+<span class="caption">
+  <span class="artist">John Flaxman</span>, 
+  <span class="title">Relief Sculpture</span> 
+  <span class="year">Early 1800s</span>
+</span>
+
+<ul>
+<li>Flaxman was a British sculptor and draughtsman, renowned for his
+linear illustrations of Homer and Dante, as well as his elegant funerary
+monuments</li>
+<li>His art is marked by clarity, simplicity, and a deep engagement with
+classical sources</li>
+<li>Flaxman’s designs were influential in both the fine and decorative
+arts, contributing to the spread of Neoclassical taste in Britain</li>
+</ul>
+<h3 id="bertel-thorvaldsen">Bertel Thorvaldsen</h3>
+
+<img src="images/premodern/neoclassical/Ganymede_with_Jupiter_Eagle_by_Bertel_Thorvaldsen._grande.jpg" alt="Jupiter as an Eagle with Ganymede">
+
+<span class="caption">
+  <span class="artist">Bertel Thorvaldsen</span>, 
+  <span class="title">Jupiter as an Eagle with Ganymede</span> 
+  <span class="year">1817</span>
+</span>
+
+
+
+<ul>
+<li>Thorvaldsen was a Danish sculptor whose works, inspired by Greek and
+Roman models, epitomise the ideals of Neoclassicism</li>
+<li>He created monumental public sculptures and refined portrait busts,
+noted for their purity of form and calm grandeur</li>
+<li>Thorvaldsen’s international reputation rivalled that of Canova, and
+his legacy is celebrated in the Thorvaldsen Museum in Copenhagen</li>
+</ul>
+<h3 id="franz-xaver-messerschmidt">Franz Xaver Messerschmidt</h3>
+
+<img src="images/premodern/neoclassical/messerschmidt_3.jpg" alt="Heads by Messerschmidt">
+
+<span class="caption">
+  <span class="artist">Franz Xavier Messerschmidt</span>, 
+  <span class="title">Heads on display</span> 
+  <span class="year">various c.1800</span>
+</span>
+
+
+<ul>
+<li>Messerschmidt was an Austrian-German sculptor best known for his
+“Character Heads,” a series of expressive busts that explore
+psychological and emotional states</li>
+<li>While trained in the Neoclassical tradition, his later works are
+noted for their originality and intense personal vision</li>
+<li>Messerschmidt’s sculptures are seen as precursors to both
+Expressionism and modern explorations of the human psyche</li>
+</ul>
+<h3 id="benjamin-west">Benjamin West</h3>
+
+<img src="images/premodern/neoclassical/Benjamin West.jpg" alt="Christ Rejectedi">
+
+<span class="caption">
+  <span class="artist">Benjamin West</span>, 
+  <span class="title">Christ Rejected</span> 
+  <span class="year">1817</span>
+</span>
+<ul>
+<li>West was an Anglo-American painter who became the second president
+of the Royal Academy in London and a leading figure in British
+Neoclassicism</li>
+<li>His history paintings, such as “The Death of General Wolfe,”
+introduced contemporary dress and realism to classical subjects</li>
+<li>West’s teaching and advocacy helped shape the development of
+academic art in Britain and America</li>
+</ul>
+
+
+<h3 id="anton-raphael-mengs">Anton Raphael Mengs</h3>
+
+<img src="images/premodern/neoclassical/Johann_Joachim_Winckelmann_(Raphael_Mengs_after_1755).jpg" alt="Johann Joachim Winckelmann at the Metropolitan Museum of Art (ca. 1777)">
+
+<span class="caption">
+  <span class="artist">Mengs</span>, 
+  <span class="title">Johann Joachim Winckelmann at the Metropolitan Museum of Art</span> 
+  <span class="year">1777</span>
+</span>
+
+
+<ul>
+<li>Mengs was a German painter and theorist, regarded as a founder of
+Neoclassicism for his advocacy of classical ideals and his frescoes and
+portraits</li>
+<li>His works are characterised by clarity, idealised forms, and a
+harmonious balance inspired by Raphael and ancient art</li>
+<li>Mengs’s influence was significant in both Italy and Germany,
+promoting a return to classical restraint and order</li>
+</ul>
+<h3 id="angelica-kauffmann">Angelica Kauffmann</h3>
+
+<img src="images/premodern/neoclassical/Kauffman.jpg" alt="Self-portrait of the Artist Hesitating Between the Arts of Music and Painting">
+
+<span class="caption">
+  <span class="artist">Angelica Kauffmann</span>, 
+  <span class="title">Self-portrait of the Artist Hesitating Between the Arts of Music and Painting</span> 
+  <span class="year">1794</span>
+</span>
+
+<ul>
+<li>Kauffmann was a Swiss-born painter who achieved international fame
+for her Neoclassical history paintings and portraits</li>
+<li>She was one of the founding members of the Royal Academy in London
+and known for her refined, elegant style and promotion of classical
+themes</li>
+<li>Kauffmann’s success helped pave the way for women artists in the
+academic tradition</li>
+</ul>
+<h3 id="jean-auguste-dominique-ingres">Jean-Auguste-Dominique
+Ingres</h3>
+
+
+<ul>
+<li>Ingres was a leading French Neoclassical painter, celebrated for his
+precise draughtsmanship, idealised forms, and mastery of line in both
+portraiture and historical subjects</li>
+<li>His works, such as “La Grande Odalisque” and “The Apotheosis of
+Homer,” combined classical clarity with sensuality and psychological
+depth</li>
+<li>Ingres’s art bridged Neoclassicism and Romanticism, profoundly
+influencing 19th-century painting in France and beyond</li>
+</ul>
+
+
+
+<h1 id="three-short-points-for-students">Three Short Points for
+Students</h1>
+
+
+
+<ul>
+<li>Neoclassical artists were inspired by ancient Greece and Rome,
+creating art that was balanced, clear, and focused on ideal beauty and
+moral lessons</li>
+<li>Their works used strong lines, simple shapes, and calm, serious
+subjects, often showing heroes or stories that encouraged virtue and
+self-control</li>
+<li>The movement was closely linked to the Enlightenment and major
+political changes, using art to promote reason, order, and civic values
+in society</li>
+</ul>
+
+
+<h1 id="glossary-for-students">Glossary for Students:</h1>
+
+
+
+<ul>
+<li><strong>Austere:</strong> Plain and serious, not decorative or
+emotional</li>
+<li><strong>Symmetry:</strong> When both sides of something are the same
+or balanced</li>
+<li><strong>Moral virtue:</strong> Good qualities like honesty, bravery,
+and self-control</li>
+<li><strong>Grand Tour:</strong> A long journey around Europe,
+especially Italy, taken by wealthy young people to learn about art and
+culture.</li>
+</ul>
