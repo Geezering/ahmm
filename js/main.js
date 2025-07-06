@@ -53,10 +53,13 @@ function makeAccordion(containerSelector) {
     const contentWrapper = document.createElement('div');
     contentWrapper.classList.add('accordion-content');
 
-    // Move content under heading into wrapper
-    while (next && 
-          (!headingTags.includes(next.tagName) || 
-           parseInt(next.tagName.replace('H', ''), 10) > thisLevel)) {
+    // Move content under heading into wrapper, but stop at H1
+    while (
+      next &&
+      (next.tagName !== 'H1') &&
+      (!headingTags.includes(next.tagName) ||
+        parseInt(next.tagName.replace('H', ''), 10) > thisLevel)
+    ) {
       const toMove = next;
       next = next.nextElementSibling;
       contentWrapper.appendChild(toMove);
