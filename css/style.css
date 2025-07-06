@@ -98,3 +98,15 @@ img {
   margin-bottom: 0.4em;
 }
 
+figcaption .artist {
+  font-weight: bold;
+}
+
+figcaption .title {
+  font-style: italic;
+}
+
+figcaption .year {
+  font-weight: normal;
+  font-style: normal;
+}
