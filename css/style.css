@@ -1,20 +1,74 @@
+/* ====== Base Styles ====== */
+:root {
+  /* Heading scale: adjust these to experiment with heading sizes */
+  --h1-scale: 1.8;
+  --h2-scale: 1.4;
+  --h3-scale: 1.15;
+  --h4-scale: 1.05;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
   background: #f9f9f9;
   color: #333;
+  line-height: 1.6;
 }
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
-h1, h2 {
+
+/* ====== Headings ====== */
+h1, h2, h3, h4 {
   color: #444;
+  font-weight: bold;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
 }
-.categories {
-  margin-bottom: 30px;
+h1 { font-size: calc(1rem * var(--h1-scale)); text-align: center; }
+h2 { font-size: calc(1rem * var(--h2-scale)); }
+h3 { font-size: calc(1rem * var(--h3-scale)); }
+h4 { font-size: calc(1rem * var(--h4-scale)); }
+
+/* Markdown content headings with backgrounds */
+.markdown-content h1 {
+  color: #000;
+  background: #ffe082;
+  border-radius: 10px;
+  padding: 0.5em 1em;
 }
+.markdown-content h2 {
+  color: #000;
+  background: #b3e5fc;
+  border-radius: 8px;
+  padding: 0.45em 0.9em;
+}
+.markdown-content h3 {
+  color: #000;
+  background: #c8e6c9;
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+}
+
+/* ====== Links ====== */
+a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+a:active {
+  color: #003366;
+}
+
+/* ====== Lists ====== */
 ul {
   list-style: none;
   padding: 0;
@@ -22,13 +76,50 @@ ul {
 li {
   margin: 8px 0;
 }
-a {
-  color: #0066cc;
-  text-decoration: none;
+.two-column-list {
+  column-count: 2;
+  column-gap: 2em;
 }
-a:hover {
-  text-decoration: underline;
+
+/* ====== Categories & Select ====== */
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
+.category-select {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+}
+.category-select label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+}
+.category-select select {
+  padding: 0.4em 0.6em;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+.category-select select:hover,
+.category-select select:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+/* ====== Content Area ====== */
+#content {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+/* ====== Markdown Content ====== */
 .markdown-content {
   background: #fff;
   border: 1px solid #ddd;
@@ -36,25 +127,25 @@ a:hover {
   padding: 20px;
   margin-top: 20px;
 }
-/* Accordion styles */
-.markdown-content h2, 
-.markdown-content h3, 
+
+/* Accordion styles for markdown headings */
+.markdown-content h2,
+.markdown-content h3,
 .markdown-content h4 {
   cursor: pointer;
-  padding: 5px 0;
   position: relative;
   transition: background 0.2s;
 }
-.markdown-content h2::before, 
-.markdown-content h3::before, 
+.markdown-content h2::before,
+.markdown-content h3::before,
 .markdown-content h4::before {
   content: "▼";
   display: inline-block;
   margin-right: 10px;
   font-size: 0.8em;
 }
-.markdown-content h2.active::before, 
-.markdown-content h3.active::before, 
+.markdown-content h2.active::before,
+.markdown-content h3.active::before,
 .markdown-content h4.active::before {
   content: "▲";
 }
@@ -67,50 +158,26 @@ a:hover {
 .accordion-content.active {
   display: block;
 }
+
+/* ====== Images & Captions ====== */
 img {
   max-width: 100%;
   height: auto;
 }
-.markdown-content h1 {
-  color: #000;
-  background: #ffe082;         /* light amber */
-  border-radius: 10px;
-  padding: 0.5em 1em;
-  margin-top: 1.2em;
-  margin-bottom: 0.5em;
+figcaption, .caption {
+  display: block;
+  margin-top: 0.5em;
 }
-
-.markdown-content h2 {
-  color: #000;
-  background: #b3e5fc;         /* light blue */
-  border-radius: 8px;
-  padding: 0.45em 0.9em;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-}
-
-.markdown-content h3 {
-  color: #000;
-  background: #c8e6c9;         /* light green */
-  border-radius: 6px;
-  padding: 0.4em 0.8em;
-  margin-top: 0.8em;
-  margin-bottom: 0.4em;
-}
-
-figcaption .artist {
+figcaption .artist,
+.caption .artist {
   font-weight: bold;
 }
-
-figcaption .title {
+figcaption .title,
+.caption .title {
   font-style: italic;
 }
-
-figcaption .year {
+figcaption .year,
+.caption .year {
   font-weight: normal;
   font-style: normal;
-}
-.two-column-list {
-  column-count: 2;
-  column-gap: 2em; /* optional: adjust spacing */
 }
