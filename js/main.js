@@ -1,13 +1,11 @@
+// Set your GitHub Pages project base path here:
+const BASE_PATH = '/ahmm/';
+
 document.addEventListener('DOMContentLoaded', function() {
-  // --- Fragment Loading (Dropdowns & Inject Links) ---
-
-  // Unified fragment loader for both dropdowns and inject-links
+  // --- Unified fragment loader for dropdowns and inject-links ---
   function loadFragment(fragmentFile) {
-    // If the file path doesn't start with /md-html_docs/, add it
-    const filePath = fragmentFile.startsWith('/md-html_docs/')
-      ? fragmentFile
-      : `/md-html_docs/${fragmentFile}`;
-
+    // Always fetch from the correct base path
+    const filePath = `${BASE_PATH}md-html_docs/${fragmentFile}`;
     fetch(filePath)
       .then(response => {
         if (!response.ok) throw new Error('Fragment not found');
@@ -24,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 
-  // Dropdowns with class .md-select
+  // --- Dropdowns with class .md-select ---
   document.querySelectorAll('.md-select').forEach(select => {
     select.addEventListener('change', function() {
       if (this.value) {
@@ -37,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Inject-link fragment loading
+  // --- Inject-link fragment loading ---
   document.querySelectorAll('.inject-link').forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
@@ -46,12 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Load a default fragment on page load (optional, change as needed)
-  // Comment out if you don't want a default
-  loadFragment('impressionism.html');
+  // --- Load a default fragment on page load (optional) ---
+  // Uncomment the next line and set your preferred default fragment:
+  // loadFragment('Impressionism.html');
 
   // --- Accordion Initialisation (for static content) ---
-  // If there is already content in #content, make it an accordion
   if (document.getElementById('content').innerHTML.trim()) {
     makeAccordion('#content');
   }
