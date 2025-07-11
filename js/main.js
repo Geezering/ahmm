@@ -4,7 +4,6 @@ const BASE_PATH = '/ahmm/';
 document.addEventListener('DOMContentLoaded', function() {
   // --- Unified fragment loader for dropdowns and inject-links ---
   function loadFragment(fragmentFile) {
-    // Always fetch from the correct base path
     const filePath = `${BASE_PATH}md-html_docs/${fragmentFile}`;
     fetch(filePath)
       .then(response => {
@@ -14,12 +13,40 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(html => {
         document.getElementById('content').innerHTML = html;
         makeAccordion('#content');
+        enableContentLinks(); // Enable link handling after fragment load
         window.scrollTo({ top: 0, behavior: 'smooth' });
       })
       .catch(err => {
         document.getElementById('content').innerHTML =
           `<p style="color:red;">Error loading content: ${err.message}</p>`;
       });
+  }
+
+  // --- Enable AJAX-style link handling inside loaded content ---
+  function enableContentLinks() {
+    const content = document.getElementById('content');
+    if (!content) return;
+
+    // Remove any previous event listeners to avoid stacking
+    // (Optional: Only needed if you reload the same content multiple times)
+    content.onclick = null;
+
+    content.addEventListener('click', function(e) {
+      // Only handle clicks on <a> elements
+      const link = e.target.closest('a');
+      if (!link || !content.contains(link)) return;
+
+      const href = link.getAttribute('href');
+      // Ignore empty, anchor, or external links
+      if (!href || href.startsWith('#') || href.startsWith('http')) return;
+
+      // Prevent default navigation
+      e.preventDefault();
+
+      // Optionally, support query strings/fragments:
+      const fragmentFile = href.replace(/^\//, ''); // Remove leading slash if present
+      loadFragment(fragmentFile);
+    });
   }
 
   // --- Dropdowns with class .md-select ---
@@ -51,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // --- Accordion Initialisation (for static content) ---
   if (document.getElementById('content').innerHTML.trim()) {
     makeAccordion('#content');
+    enableContentLinks();
   }
 });
 
