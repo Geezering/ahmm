@@ -1,7 +1,7 @@
 /* ====== Base Styles ====== */
 :root {
   /* Heading scale: adjust these to experiment with heading sizes */
-  --h1-scale: 1.8;
+  --h1-scale: 1.5;
   --h2-scale: 1.4;
   --h3-scale: 1.15;
   --h4-scale: 1.05;
