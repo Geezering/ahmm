@@ -77,7 +77,6 @@ a:active {
 
 /* ====== Lists ====== */
 ul {
-  list-style: none;
   padding: 0;
 }
 li {
@@ -187,4 +186,7 @@ figcaption .year,
 .caption .year {
   font-weight: normal;
   font-style: normal;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
 }
