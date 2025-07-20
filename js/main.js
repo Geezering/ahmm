@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .then(html => {
         document.getElementById('content').innerHTML = html;
+        fixLocalImagePaths('#content');
         makeAccordion('#content');
         enableContentLinks(); // Enable link handling after fragment load
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -20,6 +21,24 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('content').innerHTML =
           `<p style="color:red;">Error loading content: ${err.message}</p>`;
       });
+  }
+
+  // --- Converts all local image src values to be relative to BASE_PATH ---
+  function fixLocalImagePaths(containerSelector) {
+    const container = document.querySelector(containerSelector);
+    if (!container) return;
+    container.querySelectorAll('img').forEach(img => {
+      const src = img.getAttribute('src');
+      // Only change if src is present, not an absolute URL, not a  URI
+      if (
+        src &&
+        !/^(https?:)?\/\//i.test(src) && // Not http://, https://, or //
+        !src.startsWith('')         // Not 
+      ) {
+        // Adjust for extra leading slashes
+        img.src = BASE_PATH + src.replace(/^\/+/, '');
+      }
+    });
   }
 
   // --- Enable AJAX-style link handling inside loaded content ---
@@ -79,6 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (document.getElementById('content').innerHTML.trim()) {
     makeAccordion('#content');
     enableContentLinks();
+    fixLocalImagePaths('#content');
   }
 });
 
