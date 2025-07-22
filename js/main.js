@@ -1,7 +1,29 @@
 // Set your GitHub Pages project base path here:
 const BASE_PATH = '/ahmm/';
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+  // --- Accordion Reveal Helper ---
+  function openAccordionsToReveal(element) {
+    // Recursively open all hidden parent accordions containing this element
+    let cur = element;
+    while (cur) {
+      if (
+        cur.classList &&
+        cur.classList.contains('accordion-content') &&
+        cur.style.display === 'none'
+      ) {
+        cur.style.display = 'block';
+        // Also activate the previous sibling heading
+        let heading = cur.previousElementSibling;
+        if (heading && /^H[2-4]$/.test(heading.tagName)) {
+          heading.classList.add('active');
+          cur.classList.add('active');
+        }
+      }
+      cur = cur.parentElement;
+    }
+  }
+
   // --- Unified fragment loader for dropdowns and inject-links ---
   function loadFragment(fragmentFile, optionalHash) {
     const filePath = `${BASE_PATH}md-html_docs/${fragmentFile}`;
@@ -14,15 +36,14 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('content').innerHTML = html;
         fixLocalImagePaths('#content');
         makeAccordion('#content');
-        enableContentLinks(); // Link handling after fragment load
+        enableContentLinks(); // Enable link handling after fragment load
 
         // SCROLL TO ANCHOR IF HASH PRESENT
-        // use the optional hash param, or window hash
         const hash = optionalHash || window.location.hash;
         if (hash && hash.length > 1) {
-          // Remove leading #
           const target = document.getElementById(hash.replace(/^#/, ''));
           if (target) {
+            openAccordionsToReveal(target);
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
         } else {
@@ -41,26 +62,25 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!container) return;
     container.querySelectorAll('img').forEach(img => {
       const src = img.getAttribute('src');
-      // Only change if src is present, not an absolute URL, not a  URI
+      // Only change if src is present, not an absolute URL, not a URI
       if (
         src &&
-        !/^(https?:)?\/\//i.test(src) && // Not http://, https://, or //
-        !src.startsWith('')         // Not 
+        !/^(https?:)?\/\//i.test(src) &&
+        !src.startsWith('') // Not a data: URI (shouldn't be blank)
       ) {
-        // Adjust for extra leading slashes
         img.src = BASE_PATH + src.replace(/^\/+/, '');
       }
     });
   }
 
-  // --- Enable AJAX-style link handling inside loaded content, and ANCHOR JUMPS ---
+  // --- Enable AJAX-style link handling and anchor jumps inside loaded content ---
   function enableContentLinks() {
     const content = document.getElementById('content');
     if (!content) return;
 
     content.onclick = null;
 
-    content.addEventListener('click', function(e) {
+    content.addEventListener('click', function (e) {
       const link = e.target.closest('a');
       if (!link || !content.contains(link)) return;
 
@@ -69,11 +89,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Handle in-page anchor link
       if (href.startsWith('#')) {
-        // scroll to anchor in this fragment
         const id = href.slice(1);
         const anchor = document.getElementById(id);
         if (anchor) {
-          // update hash in URL bar too
+          openAccordionsToReveal(anchor);
           window.location.hash = href;
           anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
           e.preventDefault();
@@ -99,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // --- Dropdowns with class .md-select ---
   document.querySelectorAll('.md-select').forEach(select => {
-    select.addEventListener('change', function() {
+    select.addEventListener('change', function () {
       if (this.value) {
         loadFragment(this.value);
         // Reset other dropdowns
@@ -112,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // --- Inject-link fragment loading ---
   document.querySelectorAll('.inject-link').forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
       e.preventDefault();
       const fragmentFile = link.getAttribute('data-fragment');
       if (fragmentFile) loadFragment(fragmentFile);
@@ -168,7 +187,7 @@ function makeAccordion(containerSelector) {
 
     // Make heading clickable for accordion
     heading.style.cursor = 'pointer';
-    heading.addEventListener('click', function(e) {
+    heading.addEventListener('click', function (e) {
       e.stopPropagation();
       heading.classList.toggle('active');
       contentWrapper.classList.toggle('active');
