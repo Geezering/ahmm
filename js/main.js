@@ -3,7 +3,7 @@ const BASE_PATH = '/ahmm/';
 
 document.addEventListener('DOMContentLoaded', function() {
   // --- Unified fragment loader for dropdowns and inject-links ---
-  function loadFragment(fragmentFile) {
+  function loadFragment(fragmentFile, optionalHash) {
     const filePath = `${BASE_PATH}md-html_docs/${fragmentFile}`;
     fetch(filePath)
       .then(response => {
@@ -14,8 +14,20 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('content').innerHTML = html;
         fixLocalImagePaths('#content');
         makeAccordion('#content');
-        enableContentLinks(); // Enable link handling after fragment load
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        enableContentLinks(); // Link handling after fragment load
+
+        // SCROLL TO ANCHOR IF HASH PRESENT
+        // use the optional hash param, or window hash
+        const hash = optionalHash || window.location.hash;
+        if (hash && hash.length > 1) {
+          // Remove leading #
+          const target = document.getElementById(hash.replace(/^#/, ''));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
       })
       .catch(err => {
         document.getElementById('content').innerHTML =
@@ -41,30 +53,47 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // --- Enable AJAX-style link handling inside loaded content ---
+  // --- Enable AJAX-style link handling inside loaded content, and ANCHOR JUMPS ---
   function enableContentLinks() {
     const content = document.getElementById('content');
     if (!content) return;
 
-    // Remove any previous event listeners to avoid stacking
-    // (Optional: Only needed if you reload the same content multiple times)
     content.onclick = null;
 
     content.addEventListener('click', function(e) {
-      // Only handle clicks on <a> elements
       const link = e.target.closest('a');
       if (!link || !content.contains(link)) return;
 
       const href = link.getAttribute('href');
-      // Ignore empty, anchor, or external links
-      if (!href || href.startsWith('#') || href.startsWith('http')) return;
+      if (!href) return;
 
-      // Prevent default navigation
+      // Handle in-page anchor link
+      if (href.startsWith('#')) {
+        // scroll to anchor in this fragment
+        const id = href.slice(1);
+        const anchor = document.getElementById(id);
+        if (anchor) {
+          // update hash in URL bar too
+          window.location.hash = href;
+          anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          e.preventDefault();
+        }
+        return;
+      }
+
+      // Ignore external links
+      if (href.startsWith('http')) return;
+
+      // AJAX-style fragment loading for internal links
       e.preventDefault();
 
-      // Optionally, support query strings/fragments:
-      const fragmentFile = href.replace(/^\//, ''); // Remove leading slash if present
-      loadFragment(fragmentFile);
+      // Allow hash in URLs in the href, e.g. MyFragment.html#anchor
+      const split = href.split('#');
+      const fragmentFile = split[0].replace(/^\//, '');
+      const hash = split.length > 1 ? '#' + split[1] : '';
+
+      // If URL includes #hash, after loading scroll to it
+      loadFragment(fragmentFile, hash);
     });
   }
 
@@ -91,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // --- Load a default fragment on page load (optional) ---
-  // Uncomment the next line and set your preferred default fragment:
+  // Uncomment and set your preferred default fragment:
   // loadFragment('Impressionism.html');
 
   // --- Accordion Initialisation (for static content) ---
@@ -109,7 +138,7 @@ function makeAccordion(containerSelector) {
 
   const headingTags = ['H2', 'H3', 'H4'];
 
-  // Remove previous accordion content and active classes
+  // Remove previous accordion .accordion-content and .active classes
   container.querySelectorAll('.accordion-content').forEach(el => el.remove());
   container.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
 
