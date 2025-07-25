@@ -190,3 +190,29 @@ figcaption .year,
 *, *::before, *::after {
   box-sizing: border-box;
 }
+.image-popover {
+  position: relative;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.image-popover .popover-img {
+  display: none;
+  position: absolute;
+  top: 1.7em;
+  left: 0;
+  z-index: 999;
+  background: #fff;
+  border: 1px solid #888;
+  padding: 3px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.085);
+  max-width: 300px;
+}
+.image-popover:hover .popover-img,
+.image-popover:focus .popover-img {
+  display: block;
+}
+.image-popover .popover-img img {
+  max-width: 250px;
+  max-height: 160px;
+  display: block;
+}
